@@ -1,0 +1,100 @@
+/*
+              "RR"                           \Q/
+yyyyyyyyyyyp  |yyyyyy   ,        ,         ,yyQyQ,       ,yy#yy,         ,
+@QQQQQQQQM`   |QQQQ#  ,QQQ      QQQ      #QQQQQQQQQQ   #QQQQQQQQQQ      QQQ
+PQQQQQQQQQQ   |QQQM  ;QQQQQ   ,QQQQQ    @QQQQQQQQQQQp @QQQQQQQQQQQQ   ,QQQQQ
+  "@QQQQQQQQ  |QQR  #QQQQQQQ /QQQQQQQ   QQQQQQ`     ` QQQQQQQQQQQQQ  @QQQQQQQ
+  #QQQQQQQQQ  |Q^  @QQQQQQQQQQQQQQQQQQQ 7QQQQQ        "QQQQQQQQQQ#  @QQQQQQQQQQ
+#QQQQQQQQQQQ  |  ,QQQQQQQQQQQQQQQQQQQQQQ  R@QQ          R@QQQQQR^ ,QQQQQQQQQQQQQ
+
+
+Theme Name: Campus V6
+Theme URI: http://www.radiocampusangers.com/
+Author: Siméon ||/\() Web Créateur
+Author URI: http://simeon.web-createur.com/
+*/
+
+.acc {
+    .acc-content:last-child {
+        margin-bottom: $wrap-padding-alt;
+    }
+}
+
+.acc-title {
+    display: block;
+    position: relative;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding-right: 2em;
+    }
+
+    &:hover {
+        .acc-icon-help {
+            opacity: 1;
+        }
+    }
+
+    &.active {
+
+        .acc-icon-help {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.acc-icon-help {
+    position: absolute;
+
+    right: 0;
+    top: -.1em;
+
+    color: $color-global;
+
+    opacity: .5;
+
+    transition: opacity 300ms, transform 300ms ease-in-out;
+}
+
+.acc-content {
+    position: relative;
+
+    .acc-content-inner {
+        max-height: 0;
+        overflow: hidden;
+
+        transition: max-height 600ms ease-in-out;
+    }
+
+    &.active {
+        .acc-content-inner {
+            max-height: #{50em * $line-height}; // 20 lignes
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -1em;
+        right: 0;
+        height: 1px;
+        background-color: rgba($color-global,.1);
+    }
+}
+
+body[class*="page-template-page-alt"] {
+    .acc-icon-help {
+        color: #fff;
+        background: none;
+    }
+
+    .acc-content:after {
+        background-color: $color-light-transparent;
+    }
+}

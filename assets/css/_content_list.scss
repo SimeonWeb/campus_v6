@@ -1,0 +1,457 @@
+/*
+              "RR"                           \Q/
+yyyyyyyyyyyp  |yyyyyy   ,        ,         ,yyQyQ,       ,yy#yy,         ,
+@QQQQQQQQM`   |QQQQ#  ,QQQ      QQQ      #QQQQQQQQQQ   #QQQQQQQQQQ      QQQ
+PQQQQQQQQQQ   |QQQM  ;QQQQQ   ,QQQQQ    @QQQQQQQQQQQp @QQQQQQQQQQQQ   ,QQQQQ
+  "@QQQQQQQQ  |QQR  #QQQQQQQ /QQQQQQQ   QQQQQQ`     ` QQQQQQQQQQQQQ  @QQQQQQQ
+  #QQQQQQQQQ  |Q^  @QQQQQQQQQQQQQQQQQQQ 7QQQQQ        "QQQQQQQQQQ#  @QQQQQQQQQQ
+#QQQQQQQQQQQ  |  ,QQQQQQQQQQQQQQQQQQQQQQ  R@QQ          R@QQQQQR^ ,QQQQQQQQQQQQQ
+
+
+Theme Name: Campus V6
+Theme URI: http://www.radiocampusangers.com/
+Author: Siméon ||/\() Web Créateur
+Author URI: http://simeon.web-createur.com/
+*/
+
+/* Need to be wrapped */
+
+&:not(.content-grid) {
+
+	.list-item {
+		padding: .75em 0;
+
+		border-bottom: 1px solid $color-global;
+
+		.taxonomy-header {
+			border-right: none;
+		}
+
+		&.type-post,
+		&.programs-entry {
+
+			.entry-header {
+				width: 100%;
+				margin-left: -2rem;
+
+				.entry-title {
+					display: inline-block;
+					max-width: 100%;
+					padding: .4em 1rem;
+
+					font-size: 1.75em;
+
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+
+				}
+			}
+
+			.post-content {
+				padding-top: 1rem;
+				align-items: baseline;
+
+				@media screen and (max-width: 450px) {
+					.entry-header {
+						width: 100%;
+						margin-left: 0;
+						margin-bottom: .5em;
+
+						.entry-title {
+							font-size: 1.25em;
+							white-space: normal;
+						}
+					}
+
+					.post-content {
+						padding-top: 0;
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.list-item {
+		position: relative;
+		display: flex;
+
+		background: inherit;
+		color: inherit;
+
+		opacity: 1;
+		transform: translateY(0);
+		transition: transform 300ms ease-out, opacity 300ms;
+
+		.post-thumbnail,
+		.entry-player {
+			width: $image-small;
+			height: $image-small;
+			flex-shrink: 0;
+			margin: 0;
+
+			z-index: 1;
+		}
+
+		.entry-player {
+			position: absolute;
+			left: 0;
+			background-color: rgba($color-dark-global, .8);
+
+			opacity: 0;
+			transition: opacity 300ms;
+
+			z-index: 2;
+
+			a {
+				transform: translateX(-2em);
+				transition: transform 300ms ease-out;
+			}
+		}
+
+		.post-content {
+			position: relative;
+			display: flex;
+			flex-flow: row wrap;
+			flex-grow: 1;
+			align-items: center;
+
+			max-width: calc(100% - #{$image-small});
+
+			padding: 0 1rem;
+
+			z-index: 3;
+
+			.entry-header {
+
+				.entry-title {
+					font-size: 1.75em;
+					font-weight: bold;
+
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+
+				}
+			}
+
+			.entry-content {
+				display: none;
+				margin-bottom: 1em;
+				margin-right: 1em;
+				line-height: 1.4;
+
+				opacity: .7;
+
+				* {
+					margin-bottom: 0;
+				}
+
+				a {
+					color: inherit;
+				}
+			}
+		}
+
+		.post-meta:not(:empty) {
+			display: flex;
+			align-items: center;
+			padding-right: 1.5rem;
+			padding-left: 1em;
+		}
+
+		.entry-posted-on {
+			margin: 0 0 0 .4em;
+		}
+
+		&.daily-playlist-result {
+
+			.post-thumbnail {
+				width: $image-xsmall;
+				height: $image-xsmall;
+			}
+
+			.post-content {
+				max-width: none;
+				overflow: hidden;
+
+				.entry-title {
+					margin-bottom: 0;
+				}
+			}
+
+			.entry-content {
+				margin-bottom: 0;
+			}
+
+			.entry-playlist {
+				margin-left: 0;
+				margin-top: .75em;
+				padding-top: .75em;
+				border-top: 1px solid $color-light-transparent;
+
+				.playlist-item {
+					margin-bottom: .5em;
+				}
+			}
+
+			&.optimum {
+
+				.post-thumbnail {
+					box-shadow: 0 0 2em $color-light-transparent;
+				}
+
+				.entry-title {
+					font-weight: 900;
+				}
+
+				.post-meta {
+					font-weight: 900;
+				}
+			}
+		}
+
+		&.type-page {
+			.post-content {
+				.entry-title {
+					margin-bottom: 1em;
+				}
+
+				.entry-content {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&.type-album {
+			.post-content {
+				.entry-header {
+					margin-bottom: 1em;
+				}
+
+				.entry-content {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&.type-block-album_playlist,
+		&.type-block-category,
+		&.type-block-post_tag {
+			.post-content {
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: flex-start;
+
+				.entry-content {
+					margin-top: 1em;
+				}
+			}
+		}
+
+		&:hover {
+
+			.entry-player {
+				opacity: 1;
+
+				a {
+					transform: translateX(0);
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		.list-item {
+			margin-left: -$wrap-padding;
+			padding-left: $wrap-padding;
+
+			.post-thumbnail {
+				display: none;
+			}
+
+			.entry-player {
+				width: $wrap-padding !important;
+				height: 100%;
+				top: 0;
+
+				background-color: transparent;
+				opacity: 1;
+
+				a {
+					transform: none;
+				}
+			}
+
+			.post-content {
+				padding: 0 !important;
+				max-width: 100% !important;
+				flex-flow: column nowrap;
+				align-items: flex-start;
+
+				.entry-header {
+					.entry-title {
+						font-size: 1.25em;
+					}
+				}
+			}
+
+			.post-meta:not(:empty) {
+				padding-right: 0;
+			}
+
+			.entry-posted-on {
+				margin: .5em 0 0;
+
+				&:not(:empty):before {
+					content: none;
+				}
+			}
+
+			.taxonomy-header {
+
+				.taxonomy-title,
+				.taxonomy-secondary-description {
+					margin-left: 0;
+				}
+
+				.taxonomy-title {
+					font-size: 1.5em;
+				}
+
+				.taxonomy-secondary-description {
+					font-size: .8em;
+				}
+
+				.taxonomy-schedules,
+				.taxonomy-description  {
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
+
+	.taxonomy-header + .site-main {
+		border-top: 1px solid $color-global;
+	}
+}
+
+/* List item */
+
+&.content-list {
+
+	.list-item {
+
+		@media screen and (min-width: 451px) {
+			.taxonomy-header .taxonomy-thumbnail {
+				width: $image-medium;
+				height: $image-medium;
+			}
+		}
+
+		.taxonomy-description,
+		.taxonomy-schedules-day {
+			display: none;
+		}
+
+		.taxonomy-aside {
+			height: 100%;
+		}
+
+		@media screen and (max-width: 450px) {
+
+			.taxonomy-header {
+				.taxonomy-thumbnail {
+					display: none;
+				}
+
+				.taxonomy-content {
+					padding-top: 0;
+				}
+			}
+
+			.taxonomy-aside {
+				display: flex;
+				padding: 0;
+				top: 0;
+				left: 100%;
+				position: absolute;
+				border-top: none;
+				opacity: 0;
+			}
+
+			.taxonomy-open-aside {
+				display: flex;
+			}
+
+			&.show-aside {
+
+				.taxonomy-content {
+					transform: translateX(-100%);
+					opacity: 0;
+				}
+
+				.taxonomy-aside {
+					transform: translateX(-100%);
+					opacity: 1;
+				}
+
+				.taxonomy-open-aside {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+
+	&.content-list {
+
+		.taxonomy-header {
+
+			.taxonomy-content .taxonomy-schedules-hours {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+/* content-list sticky & content-list-detail */
+
+&.content-list .list-item.sticky,
+&.content-list-detail .list-item {
+
+	@media screen and (min-width: 451px) {
+		.post-thumbnail,
+		.entry-player {
+			font-size: 1.63636em;
+			width: $image-medium;
+			height: $image-medium;
+		}
+	}
+
+	.post-content {
+		max-width: calc(100% - #{$image-medium});
+
+		.entry-content {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+&.content-list .list-item.type-block-album_playlist,
+&.content-list .list-item.type-block-category,
+&.content-list .list-item.type-block-post_tag {
+	.post-content {
+
+		.entry-header {
+			margin-bottom: .5em;
+		}
+	}
+}

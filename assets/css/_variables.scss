@@ -1,0 +1,56 @@
+/*
+              "RR"                           \Q/
+yyyyyyyyyyyp  |yyyyyy   ,        ,         ,yyQyQ,       ,yy#yy,         ,
+@QQQQQQQQM`   |QQQQ#  ,QQQ      QQQ      #QQQQQQQQQQ   #QQQQQQQQQQ      QQQ
+PQQQQQQQQQQ   |QQQM  ;QQQQQ   ,QQQQQ    @QQQQQQQQQQQp @QQQQQQQQQQQQ   ,QQQQQ
+  "@QQQQQQQQ  |QQR  #QQQQQQQ /QQQQQQQ   QQQQQQ`     ` QQQQQQQQQQQQQ  @QQQQQQQ
+  #QQQQQQQQQ  |Q^  @QQQQQQQQQQQQQQQQQQQ 7QQQQQ        "QQQQQQQQQQ#  @QQQQQQQQQQ
+#QQQQQQQQQQQ  |  ,QQQQQQQQQQQQQQQQQQQQQQ  R@QQ          R@QQQQQR^ ,QQQQQQQQQQQQQ
+
+
+Theme Name: Campus V6
+Theme URI: http://www.radiocampusangers.com/
+Author: Siméon ||/\() Web Créateur
+Author URI: http://simeon.web-createur.com/
+*/
+
+/* Global */
+
+$line-height: 1.5;
+$line-height-header: 1.1;
+
+/* Colors */
+
+$color-global: #333;
+$color-dark-global: #222;
+$color-light-global: #808080;
+$color-light-transparent: rgba(#fff, .3);
+$color-one: #e3ebba;
+$color-two: #0bb0b8;
+$color-three: #b7463f;
+$color-four: #0b5763;
+$color-dark-one: #56584e;
+$color-dark-two: #2b4c4e;
+$color-dark-three: #4d3735;
+$color-dark-four: #2b3a3d;
+
+$content-background-color: #fff;
+
+/* Dimentions */
+
+$header-width: 6.875rem;
+$wrap-padding: 3.75rem;
+$wrap-padding-alt: 3rem;
+$player-height: 4.375rem;
+$image-xxxsmall: 1.875rem;
+$image-xxsmall: 2.8125rem;
+$image-xsmall: 5.625rem;
+$image-small: 6.875rem;
+$image-medium: 11.25rem;
+$image-large: 18.75rem;
+$image-xlarge: 37.5rem;
+
+$content-width: calc( 100vw - #{$header-width} - #{$wrap-padding} * 2 );
+
+$mobile-content-padding: 1.25rem;
+$mobile-content-width: calc( 100vw - #{$wrap-padding} * 2 );

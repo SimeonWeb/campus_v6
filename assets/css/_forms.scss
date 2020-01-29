@@ -1,0 +1,299 @@
+/*
+              "RR"                           \Q/
+yyyyyyyyyyyp  |yyyyyy   ,        ,         ,yyQyQ,       ,yy#yy,         ,
+@QQQQQQQQM`   |QQQQ#  ,QQQ      QQQ      #QQQQQQQQQQ   #QQQQQQQQQQ      QQQ
+PQQQQQQQQQQ   |QQQM  ;QQQQQ   ,QQQQQ    @QQQQQQQQQQQp @QQQQQQQQQQQQ   ,QQQQQ
+  "@QQQQQQQQ  |QQR  #QQQQQQQ /QQQQQQQ   QQQQQQ`     ` QQQQQQQQQQQQQ  @QQQQQQQ
+  #QQQQQQQQQ  |Q^  @QQQQQQQQQQQQQQQQQQQ 7QQQQQ        "QQQQQQQQQQ#  @QQQQQQQQQQ
+#QQQQQQQQQQQ  |  ,QQQQQQQQQQQQQQQQQQQQQQ  R@QQ          R@QQQQQR^ ,QQQQQQQQQQQQQ
+
+
+Theme Name: Campus V6
+Theme URI: http://www.radiocampusangers.com/
+Author: Siméon ||/\() Web Créateur
+Author URI: http://simeon.web-createur.com/
+*/
+
+@import 'variables';
+
+/* Search */
+
+#search-playlist-form {
+
+	label {
+		margin: 0 1em;
+	}
+
+	input {
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+	}
+}
+
+#search-form {
+
+	.search-field {
+		flex-grow: 1;
+	}
+}
+
+.search-form-label {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.site,
+.box {
+	.search-form {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		height: 100%;
+		width: 100%;
+
+		label {
+			margin-bottom: 0;
+		}
+
+		input {
+			width: auto;
+			background: transparent;
+			color: #fff;
+
+			overflow: hidden;
+
+			&:focus {
+				color: #fff;
+			}
+		}
+
+		+ .search-form-label {
+			margin-top: 2em;
+		}
+
+		.search-submit {
+			&:hover {
+				background: transparent;
+			}
+		}
+	}
+}
+
+
+/* Form */
+
+div.wpcf7 {
+	margin: 0;
+	padding: 0;
+}
+
+div.wpcf7-response-output {
+    line-height: 1;
+	color: #fff;
+	padding: .6em 1em;
+	margin-bottom: 1.5em;
+}
+
+div.wpcf7-response-inline {
+	position: static;
+	left: auto;
+	top: auto;
+	right: auto;
+	bottom: auto;
+	margin-left: auto;
+}
+
+div.wpcf7 .screen-reader-response {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	width: 1px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+div.wpcf7-mail-sent-ok {
+	background: $color-two;
+}
+
+div.wpcf7-mail-sent-ng {
+	background: $color-three;
+}
+
+div.wpcf7-spam-blocked {
+	background: $color-three;
+}
+
+div.wpcf7-validation-errors {
+	background: $color-three;
+}
+
+span.wpcf7-form-control,
+span.wpcf7-form-control-wrap {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+span.wpcf7-not-valid-tip {
+	display: block;
+	background: $color-three;
+	color: #fff;
+	font-size: .65em;
+	padding: 0 .5em;
+	cursor: pointer;
+}
+
+span.wpcf7-not-valid-tip span {
+	display: none;
+}
+
+span.wpcf7-not-valid-tip:hover span {
+	display: inline;
+	font-size: 80%;
+}
+
+.use-floating-validation-tip span.wpcf7-not-valid-tip {
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	z-index: 100;
+	border: 1px solid $color-three;
+	background: #fff;
+	padding: .2em .8em;
+}
+
+span.wpcf7-list-item {
+	margin-right: 0.5em;
+}
+
+.wpcf7-display-none {
+	display: none;
+}
+
+div.wpcf7 {
+
+	img.ajax-loader {
+		display: none;
+	}
+
+	div.ajax-error {
+		display: none;
+	}
+
+	.placeheld {
+		color: #888;
+	}
+
+	.has-free-text {
+		display: block;
+	}
+
+	.wpcf7-free-text {
+		width: auto;
+	}
+
+	.wpcf7-checkbox {
+		border-top: 1px solid rgba(#fff, 0.3);
+		padding-top: 7px;
+	}
+
+	.wpcf7-checkbox input[type="checkbox"] {
+		display: none;
+	}
+
+	.wpcf7-checkbox label span:before {
+		content: '';
+		display: inline-block;
+		vertical-align: text-bottom;
+		height: 1em;
+		width: 1em;
+		line-height: 1;
+		margin-right: .5em;
+		background: rgba(#fff, .7);
+		text-align: center;
+		color: $color-global;
+	}
+
+	.wpcf7-checkbox label:hover span:before,
+	.wpcf7-checkbox label input:checked + span:before {
+		background: #fff;
+	}
+
+	.wpcf7-checkbox label input:checked + span:before {
+		display: inline-block;
+		content: '✓';
+	}
+
+	p {
+		font-weight: normal;
+		text-align: left;
+	}
+
+	p label {
+		display: inline-block;
+	}
+}
+
+.wpcf7-submit {
+	width: auto;
+}
+
+/* Form Nous rejoindre */
+
+.wpcf7-form-control-wrap.season {
+	display: block;
+	margin: 60px 0;
+}
+
+.wpcf7-form-control-wrap.season .wpcf7-checkbox {
+	border-top: none;
+	padding: 0;
+}
+
+.wpcf7-form-control-wrap.season .wpcf7-list-item {
+	display: inline-block;
+	font-weight: normal;
+	width: 48%;
+	height: 4em;
+	line-height: 4em;
+	text-align: center;
+	vertical-align: top;
+	font-size: 200%;
+}
+
+.wpcf7-form-control-wrap.season .wpcf7-list-item.first {
+	margin-right: 2%;
+	background: #FF921E;
+}
+
+.wpcf7-form-control-wrap.season .wpcf7-list-item.last {
+	margin: 0 0 0 2%;
+	background: #29AAE1;
+}
+
+.wpcf7-form-control-wrap.season .wpcf7-list-item label {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+}
+
+div.wpcf7 .wpcf7-form-control-wrap.season label span:before {
+	display: none;
+	color: #fff;
+	margin-right: .1em;
+}
+
+div.wpcf7 .wpcf7-form-control-wrap.season label:hover span:before,
+div.wpcf7 .wpcf7-form-control-wrap.season label input:checked + span:before {
+	background: none;
+}
+
+.wpcf7-form-control-wrap.lien_1 input,
+.wpcf7-form-control-wrap.lien_2 input {
+	margin-bottom: 10px;
+}

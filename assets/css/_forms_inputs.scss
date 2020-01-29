@@ -1,0 +1,218 @@
+/*
+              "RR"                           \Q/
+yyyyyyyyyyyp  |yyyyyy   ,        ,         ,yyQyQ,       ,yy#yy,         ,
+@QQQQQQQQM`   |QQQQ#  ,QQQ      QQQ      #QQQQQQQQQQ   #QQQQQQQQQQ      QQQ
+PQQQQQQQQQQ   |QQQM  ;QQQQQ   ,QQQQQ    @QQQQQQQQQQQp @QQQQQQQQQQQQ   ,QQQQQ
+  "@QQQQQQQQ  |QQR  #QQQQQQQ /QQQQQQQ   QQQQQQ`     ` QQQQQQQQQQQQQ  @QQQQQQQ
+  #QQQQQQQQQ  |Q^  @QQQQQQQQQQQQQQQQQQQ 7QQQQQ        "QQQQQQQQQQ#  @QQQQQQQQQQ
+#QQQQQQQQQQQ  |  ,QQQQQQQQQQQQQQQQQQQQQQ  R@QQ          R@QQQQQR^ ,QQQQQQQQQQQQQ
+
+
+Theme Name: Campus V6
+Theme URI: http://www.radiocampusangers.com/
+Author: Siméon ||/\() Web Créateur
+Author URI: http://simeon.web-createur.com/
+*/
+
+@import 'variables';
+
+/* Global */
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: .5em;
+}
+
+fieldset {
+	margin-bottom: 1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+	display: inline-block;
+	color: $color-global;
+	background: #fff;
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+	border: none;
+	padding: .6em 1em;
+	width: 100%;
+	border-radius: 0;
+
+	font-size: 1em;
+	font-family: "Bender", Helvetica, sans-serif;
+	font-weight: normal;
+
+	transition: background-color 300ms, color 300ms, box-shadow 300ms;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus,
+select:focus {
+	color: $color-dark-global;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin-right: 0.5em;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+	font-weight: 400;
+}
+
+.button,
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"] {
+	display: inline-block;
+	color: #fff !important;
+	background-color: $color-global;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	cursor: pointer;
+	font-weight: 900;
+	line-height: 1;
+	padding: .6em 1em;
+	text-shadow: none;
+	transition: background-color 0.2s;
+}
+
+.button:hover,
+.button:focus,
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus {
+	background: $color-two;
+}
+
+/* Colors */
+
+.button.button-primary,
+button.button-primary,
+input[type="button"].button-primary,
+input[type="submit"] {
+	background-color: $color-two;
+}
+
+.button.button-secondary,
+button.button-secondary,
+input[type="button"].button-secondary {
+	background-color: $color-three;
+}
+
+.button.button-tertiary,
+button.button-tertiary,
+input[type="button"].button-tertiary,
+input[type="reset"] {
+	background-color: $color-one;
+}
+
+.button.button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:hover,
+button.button-primary:focus,
+input[type="button"].button-primary:hover,
+input[type="button"].button-primary:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	background: $color-dark-two;
+}
+
+.button.button-secondary:hover,
+.button.button-secondary:focus,
+button.button-secondary:hover,
+button.button-secondary:focus,
+input[type="button"].button-secondary:hover,
+input[type="button"].button-secondary:focus {
+	background: $color-dark-three;
+}
+
+.button.button-tertiary:hover,
+.button.button-tertiary:focus,
+button.button-tertiary:hover,
+button.button-tertiary:focus,
+input[type="button"].button-tertiary:hover,
+input[type="button"].button-tertiary:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus {
+	background: $color-dark-one;
+}
+
+/* Size */
+
+.button.size-small,
+button.size-small,
+input[type="button"].size-small,
+input[type="submit"].size-small,
+input[type="reset"].size-small {
+	font-size: .75em;
+}
+
+.button.size-medium,
+button.size-medium,
+input[type="button"].size-medium,
+input[type="submit"].size-medium,
+input[type="reset"].size-mmedium {
+	font-size: 1.25em;
+}
+
+.button.size-large,
+button.size-large,
+input[type="button"].size-large,
+input[type="submit"].size-large,
+input[type="reset"].size-large {
+	font-size: 1.5em;
+}
+
+/* Placeholder text color -- selectors need to be separate to work. */
+::-webkit-input-placeholder {
+	color: #777;
+}
+
+:-moz-placeholder {
+	color: #777;
+}
+
+::-moz-placeholder {
+	color: #777;
+	opacity: 1;
+	/* Since FF19 lowers the opacity of the placeholder by default */
+}
+
+:-ms-input-placeholder {
+	color: #777;
+}

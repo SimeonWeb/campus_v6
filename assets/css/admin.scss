@@ -1,0 +1,367 @@
+/*!
+              "RR"                           \Q/
+yyyyyyyyyyyp  |yyyyyy   ,        ,         ,yyQyQ,       ,yy#yy,         ,
+@QQQQQQQQM`   |QQQQ#  ,QQQ      QQQ      #QQQQQQQQQQ   #QQQQQQQQQQ      QQQ
+PQQQQQQQQQQ   |QQQM  ;QQQQQ   ,QQQQQ    @QQQQQQQQQQQp @QQQQQQQQQQQQ   ,QQQQQ
+  "@QQQQQQQQ  |QQR  #QQQQQQQ /QQQQQQQ   QQQQQQ`     ` QQQQQQQQQQQQQ  @QQQQQQQ
+  #QQQQQQQQQ  |Q^  @QQQQQQQQQQQQQQQQQQQ 7QQQQQ        "QQQQQQQQQQ#  @QQQQQQQQQQ
+#QQQQQQQQQQQ  |  ,QQQQQQQQQQQQQQQQQQQQQQ  R@QQ          R@QQQQQR^ ,QQQQQQQQQQQQQ
+
+
+Theme Name: Campus V6
+Theme URI: http://www.radiocampusangers.com/
+Author: Siméon ||/\() Web Créateur
+Author URI: http://simeon.web-createur.com/
+*/
+
+@import 'variables';
+@import 'colors';
+
+/* Global */
+
+.wp-list-table {
+
+	ul {
+		margin: 0;
+	}
+
+	.more {
+		cursor: help;
+	}
+}
+
+.content-wrap {
+	@import 'content_list';
+
+	&[class*="content-list"] {
+
+		.content-header {
+			border-bottom: 1px solid rgba(#000,.1);
+		}
+
+		.hentry,
+		.programs-entry {
+			border-color: #e5e5e5;
+
+			&.optimum {
+				background-color: #fff;
+			}
+		}
+
+		a:not(:hover) {
+			text-decoration: none;
+		}
+	}
+}
+
+@import 'global';
+@import 'columns';
+@import 'forms';
+
+.inside-entry-content {
+
+	h3 {
+		margin-top: 2em;
+	}
+
+	ul {
+		list-style: disc;
+		margin-left: 1em;
+	}
+
+	ol {
+		list-style: decimal;
+		margin-left: 1em;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+/* edit.php */
+
+.column-thumbnail {
+	width: 50px;
+
+	.thumbnail-wrap {
+		background-color: $color-dark-global;
+		overflow: hidden;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.column-time {
+	width: 6em;
+}
+
+@media screen and (max-width: 360px) {
+	.column-thumbnail {
+		display: none;
+	}
+}
+
+.column-album_options {
+	width: 2em;
+	text-align: center !important;
+
+	a {
+		color: #555;
+
+		&:hover {
+			color: #333;
+		}
+	}
+}
+
+/* Edit post */
+
+#post-playlist {
+
+	.post-playlist-entries {
+	}
+
+	.post-playlist-entry {
+		position: relative;
+		padding: 10px 10px 10px 70px;
+	}
+
+	.post-playlist-num {
+		font-size: 2em;
+		font-weight: bold;
+		text-align: center;
+		height: 60px;
+		width: 60px;
+		line-height: 60px;
+		position: absolute;
+		left: 0;
+		top: 10px;
+		color: #999;
+		cursor: move;
+	}
+
+	input {
+	    background-color: #FFFFFF;
+	}
+
+	input {
+	    font-size: 1.4em;
+	    height: 1.7em;
+	    line-height: 100%;
+	    margin: 1px 0;
+	    outline: 0 none;
+	    padding: 3px 8px;
+	    width: 100%;
+	}
+
+	.post-playlist-other input,
+	.post-playlist-link input {
+		font-size: 1.2em;
+		margin-top: 3px;
+	}
+
+	label {
+	    color: #BBBBBB;
+	    font-size: 1.4em;
+	    padding: 7px 10px;
+	    position: absolute;
+	}
+	label {
+	    cursor: text;
+	}
+
+	.post-playlist-entries {
+		margin-bottom: 20px;
+	}
+
+	.post-playlist-field {
+		width: 49.5%;
+		float: left;
+	}
+
+	.post-playlist-title,
+	.post-playlist-other {
+		margin-right: 1%;
+	}
+
+	.add-field {
+		cursor: pointer;
+	}
+}
+
+/* terms */
+
+.campus-media-uploader,
+.campus-media-cropper {
+}
+
+.custom-img-container {
+	position: relative;
+	display: inline-block;
+
+	img {
+		display: block;
+		width: 95%;
+		max-width: 300px;
+		height: auto;
+		cursor: pointer;
+	}
+}
+
+.form-table {
+
+	.widefat {
+		width: 95%;
+	}
+}
+
+.form-table,
+.form-field {
+
+
+	[class^="prefix-"],
+	[class^="suffix-"] {
+		display: inline-block;
+		width: 10%;
+	}
+
+	.prefix-for-external-url,
+	.prefix-for-external-title {
+
+		+ .widefat {
+			width: 85%;
+		}
+	}
+
+	.prefix-for-day + input {
+		width: 9em;
+		margin-right: 1em;
+	}
+
+	.prefix-for-hours-begin {
+
+		+ input {
+			width: 3.5em;
+		}
+	}
+
+	.prefix-for-hours-end {
+		width: 2em;
+		text-align: center;
+
+		+ input {
+			width: 3.5em;
+		}
+	}
+
+	[type="date"],
+	.prefix-for-album_playlist_associated_post_date {
+		width: 10em;
+	}
+}
+
+.userdiv div.tabs-panel {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    max-height: 200px;
+    min-height: 42px;
+    line-height: 1.4em;
+    overflow: auto;
+    padding: 0 0.9em;
+}
+
+ul.userchecklist {
+    line-height: 19px;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+
+	> li {
+		> label {
+			font-weight: bold;
+		}
+
+		ul {
+			margin-left: 18px;
+
+			li {
+				a {
+					display: none;
+				}
+
+				&:hover {
+					a {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Album Playlist */
+
+.column-taxonomy-album_artist,
+.column-taxonomy-album_song,
+.column-taxonomy-album_label,
+.column-taxonomy-album_genre,
+.column-taxonomy-album_playlist {
+	width: 10%;
+}
+
+.column-visibility {
+	width: 2.2em;
+}
+
+/* Daily playlist */
+
+
+
+#delete-playlist-form {
+	.ntdelbutton {
+		position: static;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+	}
+
+	.categorychecklist li a:not(:hover) {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+/* Blocks */
+
+.type-tabs .nav-tab-wrapper {
+	margin: -6px -12px 0 -12px;
+	padding-left: 2px;
+	background-color: #f1f1f1;
+
+	.nav-tab {
+		margin-bottom: 0;
+
+		&.nav-tab-active {
+			margin-bottom: -1px;
+			background-color: #fff;
+			border-bottom-color: #fff;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			box-shadow: none;
+			outline: none;
+		}
+	}
+}
+
+.smn-sticky #sticky-span {
+	margin-left: 0;
+}

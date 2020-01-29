@@ -1,0 +1,246 @@
+/*
+              "RR"                           \Q/
+yyyyyyyyyyyp  |yyyyyy   ,        ,         ,yyQyQ,       ,yy#yy,         ,
+@QQQQQQQQM`   |QQQQ#  ,QQQ      QQQ      #QQQQQQQQQQ   #QQQQQQQQQQ      QQQ
+PQQQQQQQQQQ   |QQQM  ;QQQQQ   ,QQQQQ    @QQQQQQQQQQQp @QQQQQQQQQQQQ   ,QQQQQ
+  "@QQQQQQQQ  |QQR  #QQQQQQQ /QQQQQQQ   QQQQQQ`     ` QQQQQQQQQQQQQ  @QQQQQQQ
+  #QQQQQQQQQ  |Q^  @QQQQQQQQQQQQQQQQQQQ 7QQQQQ        "QQQQQQQQQQ#  @QQQQQQQQQQ
+#QQQQQQQQQQQ  |  ,QQQQQQQQQQQQQQQQQQQQQQ  R@QQ          R@QQQQQR^ ,QQQQQQQQQQQQQ
+
+
+Theme Name: Campus V6
+Theme URI: http://www.radiocampusangers.com/
+Author: Siméon ||/\() Web Créateur
+Author URI: http://simeon.web-createur.com/
+*/
+
+/* General */
+
+.entry-header {
+	margin-top: $wrap-padding-alt;
+	margin-left: 0;
+	width: auto;
+
+	.entry-title {
+		color: inherit;
+	}
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	line-height: 1.1;
+	margin: $wrap-padding-alt 0 0.75em;
+	color: $color-three;
+}
+
+
+> h2:first-child,
+> h3:first-child,
+> h4:first-child,
+> h5:first-child,
+> h6:first-child {
+	margin-top: 0;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-weight: 900;
+}
+
+h3 {
+	font-size: 1.25em;
+	font-weight: 900;
+}
+
+h4 {
+	font-size: 1.125em;
+	font-weight: 900;
+}
+
+h5 {
+	font-size: 1em;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 0.8125em;
+	font-weight: 900;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 1.5em;
+	padding: 0;
+}
+
+ul {
+	list-style: square;
+}
+
+ol {
+	counter-reset: item;
+}
+
+blockquote {
+	color: $color-light-global;
+	font-size: 1.125em;
+
+	margin: 0;
+	padding: 1.5em 0 1.5em 1.5em;
+}
+
+> *:last-child {
+	margin-bottom: 0;
+}
+
+a {
+	color: $color-two;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $color-three;
+}
+
+/* Form */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select {
+	background: #eee;
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus,
+select:focus {
+	background: #fff;
+	box-shadow: 0 0 1em rgba($color-global,.3);
+}
+
+/* Graphics */
+
+ul.graphic {
+	display: flex;
+
+	list-style: none;
+	margin-left: 0;
+
+	color: #fff;
+	overflow: hidden;
+
+	li {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+
+		padding: 1.25em 0;
+		min-width: 2em;
+
+		text-align: center;
+		cursor: help;
+
+		.graphic-value {
+			font-size: 1.1em;
+			font-weight: bold;
+
+			padding: 0 .2em;
+		}
+
+		small,
+		.graphic-text {
+			font-size: .85em;
+			line-height: 1.2;
+
+			padding: 0 .2em;
+		}
+
+		@media screen and (min-width: 450px) {
+
+			&.graphic-small {
+				small,
+				.graphic-text {
+					display: none;
+				}
+			}
+		}
+
+		&:nth-of-type(1),
+		&:nth-of-type(4) {
+			background-color: $color-three;
+		}
+
+		&:nth-of-type(2),
+		&:nth-of-type(5) {
+			background-color: $color-two;
+		}
+
+		&:nth-of-type(3n) {
+			background-color: $color-four;
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		flex-flow: column nowrap;
+
+		li {
+			padding: 1.25em .5em;
+			width: 100% !important;
+		}
+	}
+}
+
+/* Playlist */
+
+.entry-playlist {
+	list-style: none;
+
+	.playlist-item {
+
+		.field-title {
+			font-weight: bold;
+		}
+
+		.field-artist {
+			font-weight: normal;
+		}
+
+		.field-other {
+			font-weight: 100;
+		}
+	}
+}

@@ -1,0 +1,93 @@
+/*
+              "RR"                           \Q/
+yyyyyyyyyyyp  |yyyyyy   ,        ,         ,yyQyQ,       ,yy#yy,         ,
+@QQQQQQQQM`   |QQQQ#  ,QQQ      QQQ      #QQQQQQQQQQ   #QQQQQQQQQQ      QQQ
+PQQQQQQQQQQ   |QQQM  ;QQQQQ   ,QQQQQ    @QQQQQQQQQQQp @QQQQQQQQQQQQ   ,QQQQQ
+  "@QQQQQQQQ  |QQR  #QQQQQQQ /QQQQQQQ   QQQQQQ`     ` QQQQQQQQQQQQQ  @QQQQQQQ
+  #QQQQQQQQQ  |Q^  @QQQQQQQQQQQQQQQQQQQ 7QQQQQ        "QQQQQQQQQQ#  @QQQQQQQQQQ
+#QQQQQQQQQQQ  |  ,QQQQQQQQQQQQQQQQQQQQQQ  R@QQ          R@QQQQQR^ ,QQQQQQQQQQQQQ
+
+
+Theme Name: Campus V6
+Theme URI: http://www.radiocampusangers.com/
+Author: Siméon ||/\() Web Créateur
+Author URI: http://simeon.web-createur.com/
+*/
+
+/* Vars */
+
+$i: 0;
+$sizes: xs sm md lg xl;
+$break-xxl: 1921px;
+$break-xl: 1441px;
+$break-lg: 1025px;
+$break-md: 769px;
+$break-sm: 451px;
+
+@mixin media-query( $size ) {
+
+	@if $size == xl {
+		@media (min-width: $break-xl) { @content; }
+	}
+	@else if $size == lg {
+		@media (min-width: $break-lg) { @content; }
+	}
+	@else if $size == md {
+		@media (min-width: $break-md) { @content; }
+	}
+	@else if $size == sm {
+		@media (min-width: $break-sm) { @content; }
+	}
+	@else {
+		@content;
+	}
+}
+
+/* Row */
+.smn-row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+
+    margin-left: -1em;
+    margin-right: -1em;
+
+    &.valignmiddle {
+        align-items: center;
+    }
+
+    &.valignbottom {
+        align-items: flex-end;
+    }
+}
+
+/* Columns */
+
+.smn-col {
+    padding-left: 1em;
+    padding-right: 1em;
+	box-sizing: border-box;
+
+	.inner-col {
+		position: relative;
+		min-height: 1px;
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@each $size in $sizes {
+
+	@include media-query( $size ) {
+
+		@for $i from 12 through 1 {
+
+			.smn-col.col-#{$size}-#{$i} {
+				width: #{$i / 12 * 100%};
+			}
+		}
+	}
+}

@@ -1,0 +1,426 @@
+/*!
+              "RR"                           \Q/
+yyyyyyyyyyyp  |yyyyyy   ,        ,         ,yyQyQ,       ,yy#yy,         ,
+@QQQQQQQQM`   |QQQQ#  ,QQQ      QQQ      #QQQQQQQQQQ   #QQQQQQQQQQ      QQQ
+PQQQQQQQQQQ   |QQQM  ;QQQQQ   ,QQQQQ    @QQQQQQQQQQQp @QQQQQQQQQQQQ   ,QQQQQ
+  "@QQQQQQQQ  |QQR  #QQQQQQQ /QQQQQQQ   QQQQQQ`     ` QQQQQQQQQQQQQ  @QQQQQQQ
+  #QQQQQQQQQ  |Q^  @QQQQQQQQQQQQQQQQQQQ 7QQQQQ        "QQQQQQQQQQ#  @QQQQQQQQQQ
+#QQQQQQQQQQQ  |  ,QQQQQQQQQQQQQQQQQQQQQQ  R@QQ          R@QQQQQR^ ,QQQQQQQQQQQQQ
+
+
+Theme Name: Campus V6
+Theme URI: http://www.radiocampusangers.com/
+Author: Siméon ||/\() Web Créateur
+Author URI: http://simeon.web-createur.com/
+*/
+
+@import 'variables';
+
+/*--------------------------------------------------------------
+0.1 Global
+--------------------------------------------------------------*/
+
+.content-grid {
+
+	.programs {
+		width: 100%;
+	}
+
+	.content-hentry,
+	.content-aside {
+		height: 100%;
+		height: calc( #{$wrap-padding} * 24 );
+		margin-top: 3.125em; // Header height
+	}
+
+	.content-aside {
+		position: absolute;
+		top: 0;
+		z-index: 0;
+	}
+
+	.programs {
+		.taxonomy-header {
+			display: none;
+		}
+	}
+}
+
+[class*="content-list"] {
+
+	.content-hentry {
+		margin-top: 3.125em; // Header height
+	}
+
+	.content-aside {
+		display: none;
+	}
+
+	.programs-day {
+		max-width: 0;
+		height: 0;
+		overflow: hidden;
+
+		&.current {
+			height: auto;
+			max-width: 100%;
+		}
+	}
+
+	.program-summary {
+		display: none;
+	}
+
+	.programs-entry {
+		top: auto !important;
+		height: auto !important;
+	}
+
+	@media screen and (max-width: 450px) {
+		.programs-content {
+			overflow: visible;
+		}
+
+		.programs-day {
+			&.current {
+				overflow: visible;
+			}
+		}
+	}
+}
+
+.programs {
+	position: relative;
+
+	.dashicons-before:before {
+		display: inline-block;
+		width: 1.3em;
+		height: 1.3em;
+		font-size: 1.3em;
+		line-height: 1.3em;
+		vertical-align: middle;
+	}
+}
+
+.programs-content,
+.programs-footer {
+	height: 100%;
+}
+
+.content-header,
+.programs-title {
+	font-size: 1em;
+}
+
+.programs-content {
+	overflow: hidden;
+}
+
+/* Navigation */
+
+.nav-day {
+	position: absolute;
+	right: 1em;
+	top: 0;
+	height: 3.125em;
+
+	display: flex;
+	align-items: center;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		margin-left: .4em;
+
+		&.disabled {
+			opacity: .3;
+		}
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.content-grid {
+		.nav-day {
+			display: none;
+		}
+	}
+}
+
+/* Header (Days) */
+
+.programs-header {
+	font-weight: 900;
+	height: 3.125em;
+	width: 100%;
+
+	.programs-day {
+		display: flex;
+		align-items: center;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		.program-day-title {
+			padding: 0 1em;
+		}
+	}
+}
+
+.long {
+    display: none;
+}
+
+[class*="content-list"] {
+
+	.programs-header {
+		.programs-day {
+			hgroup {
+				font-size: 2em;
+				margin: 0 .5em;
+			}
+		}
+
+		.short {
+		    display: none;
+		}
+
+		.long {
+		    display: block;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 451px) {
+	.content-area.content-grid {
+		.programs-header {
+
+			.short {
+			    display: none;
+			}
+
+			.long {
+				display: block;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.content-area {
+		.programs-header {
+
+			.short {
+			    display: block;
+			}
+
+			.long {
+				display: none;
+			}
+		}
+	}
+}
+
+/* Columns */
+
+.programs-content {
+	display: flex;
+}
+
+.programs-day {
+	position: relative;
+	height: 100%;
+	min-height: 1px;
+
+	flex: 1;
+}
+
+/* Program */
+
+.content-grid {
+
+	.programs-entries {
+		position: relative;
+	}
+
+	.programs-entry {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 4.16666666667%;
+		z-index: 1;
+
+		&.smaller {
+			font-size: .85em;
+
+			.program-title {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			.program-description {
+				display: none;
+			}
+		}
+	}
+
+	.program,
+	.program-link {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+	}
+
+	.icon-rebroadcasting {
+		left: 20%;
+		top: 5%;
+		width: 60%;
+		height: 90%;
+	}
+}
+
+[class*="content-list"] {
+
+	.program-link {
+		position: relative;
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+	}
+
+	.time-handler {
+		display: none;
+	}
+
+	.icon-rebroadcasting {
+		display: none;
+	}
+}
+
+.content-list {
+	.taxonomy-schedules-hours {
+		margin-bottom: 0;
+	}
+
+	.icon-rebroadcasting {
+		left: 1.5rem;
+		top: 0;
+		width: calc( #{$image-medium} - 3rem );
+		height: 100%;
+	}
+}
+
+.program-summary {
+	position: relative;
+	padding: .6em 1em;
+
+	z-index: 1;
+
+	.program-title {
+		font-weight: bold;
+		line-height: 1;
+		text-overflow: ellipsis;
+		overflow: hidden;
+
+		+ .program-description:not(:empty) {
+			margin-top: .2em;
+		}
+	}
+
+	.program-description {
+		font-size: .75em;
+		line-height: 1.1;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+.programs-entry	{
+	.program {
+		position: relative;
+	}
+
+	.icon-rebroadcasting {
+		position: absolute;
+
+		color: $color-global;
+		opacity: .3;
+	}
+}
+
+/* Hours */
+
+.content-grid {
+
+	.programs-entry.programs-hour {
+		position: relative;
+
+		.hour {
+			line-height: 1;
+		    position: relative;
+		    top: -.5em;
+		}
+
+		&:after {
+			content: '';
+			height: 1px;
+			position: absolute;
+			left: 100%;
+			top: 0;
+		}
+	}
+}
+
+.time-handler {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #fff;
+
+	opacity: .75;
+
+	z-index: 10;
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 3px;
+		width: 14.2857%;
+		top: -1px;
+		background-color: #fff;
+	}
+
+	&.today-1:after {
+		left: 14.2857%;
+	}
+
+	&.today-2:after {
+		left: 28.5714%;
+	}
+
+	&.today-3:after {
+		left: 42.8571%;
+	}
+
+	&.today-4:after {
+		right: 28.5714%;
+	}
+
+	&.today-5:after {
+		right: 14.2857%;
+	}
+
+	&.today-6:after {
+		right: 0;
+	}
+}
