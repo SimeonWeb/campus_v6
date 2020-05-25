@@ -7,8 +7,16 @@
 		"uuidString": "38CB8487-0A34-4F70-9B5D-963F3962C666"
 		}
 	],
-"creatorBuild": "31934",
+"creatorBuild": "32147",
 "files": {
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/404.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -29,131 +37,131 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_accordion.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/_animations.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_animations.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/_colors.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_colors.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/_columns.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_columns.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/_content.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_content.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/_content_list.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_content_list.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/_forms.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_forms.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/_forms_inputs.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_forms_inputs.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/_global.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_global.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/_variables.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/css/_variables.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/admin.css": {
 		"aP": 1,
@@ -169,14 +177,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/admin.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/editor-style.css": {
 		"aP": 1,
@@ -192,14 +200,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/editor-style.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/ie8.css": {
 		"aP": 1,
@@ -235,14 +243,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/mediaelementplayer.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/program-grid.css": {
 		"aP": 1,
@@ -258,14 +266,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/program-grid.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/sharing.css": {
 		"aP": 1,
@@ -281,14 +289,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/sharing.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/css/wp-mediaelement.css": {
 		"aP": 1,
@@ -304,14 +312,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/assets/css/wp-mediaelement.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/assets/fonts/28CFF3_0_0.eot": {
 		"cB": 0,
@@ -1304,14 +1312,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/inc/rca-events-grid/assets/css/admin-grid.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/inc/rca-events-grid/assets/js/admin-grid.js": {
 		"bF": 0,
@@ -1723,14 +1731,14 @@
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
-		"dS": 0,
+		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/style.css",
 		"oF": 0,
 		"oS": 3,
-		"uL": 1
+		"sct": 1
 		},
 	"/template-parts/album/content.php": {
 		"cB": 0,
@@ -3916,13 +3924,13 @@
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
+		"compilerType": 1,
 		"createSourceMap": 0,
-		"debugStyle": 0,
 		"decimalPrecision": 10,
+		"emitCharset": 1,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
-		"shouldRunBless": 0,
-		"useLibsass": 1
+		"shouldRunBless": 0
 		},
 	"languageDefaultsSLIM": {
 		"autoOutputAction": 0,

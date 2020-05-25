@@ -253,11 +253,11 @@ class Campus_Blocks {
 			'Catégorie',
 			wp_dropdown_categories( array( 'class' => 'widefat', 'name' => $this->slug . '_type_category[term_id]', 'taxonomy' => 'category', 'selected' => $meta['term_id'], 'show_option_none' => 'Choisir une catégorie', 'orderby' => 'name', 'order' => 'asc', 'hide_empty' => 0, 'hierarchical' => true, 'echo' => false ) )
 		);
-		
+
 		$rows .= sprintf( '<tr><th>%s</th><td>%s%s</td></tr>',
 			'Options',
 			sprintf( '<p><label><input type="checkbox" name="%s_type_%s[invert]"%s /> %s</label></p>', $this->slug, 'category', checked( 'on', $meta['invert'], false ), 'Inverser le titre et la catégorie' ),
-			sprintf( '<p><label><input type="checkbox" name="%s_type_%s[no_parent]"%s /> %s</label></p>', $this->slug, 'category', checked( 'on', $meta['no_parent'], false ), 'Ne pas afficher le parent de la catégorie' ),
+			sprintf( '<p><label><input type="checkbox" name="%s_type_%s[no_parent]"%s /> %s</label></p>', $this->slug, 'category', checked( 'on', $meta['no_parent'], false ), 'Ne pas afficher le parent de la catégorie' )
 		);
 
 		printf( '<table class="form-table">%s</table>', $rows );

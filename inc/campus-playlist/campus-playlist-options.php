@@ -263,7 +263,7 @@ class Campus_Daily_Playlist_Options {
 		}
 
 		// Parse xml
-		$data = new SimpleXMLElement( $data );
+		$data = new SimpleXMLElement( self::utf8_for_xml( $data ) );
 		$songs_obj = array();
 
 		//print_r($data);
@@ -342,9 +342,9 @@ class Campus_Daily_Playlist_Options {
 	function insert_songs( $songs, $date, $filename ) {
 		global $wpdb;
 
-   		//$songs = wp_parse_args( (array) $songs, array( ) );
+		//$songs = wp_parse_args( (array) $songs, array( ) );
 
-   		$table_name = self::$table_name;
+		$table_name = self::$table_name;
 
 		if( empty( $songs ) )
 			return;
@@ -357,16 +357,23 @@ class Campus_Daily_Playlist_Options {
 				return $this->message->add( 'error', __( 'Problème lors de la mise à jour des données. Contacte ton webmaster préféré ;)' ) );
 		}
 
+		$total_songs = count( $songs );
+		$added_songs = 0;
+
 		foreach( $songs as $k => $song ) {
 			$insert = false;
 			$message = false;
+
+			if( ! self::can_upload_song( $song ) )
+				continue;
 
 			if( $song['duration'] > 0 ) {
 
 				$prepared_song = self::prepare_song( $song );
 
-				if( $prepared_song )
+				if( $prepared_song ) {
 					$insert = $wpdb->insert( $table_name, $prepared_song );
+				}
 
 				if( $insert === false ) {
 					$message = sprintf( __( 'Le morceau <strong>%s</strong> par <strong>%s</strong> programmé à <strong>%s</strong> n\'a pas pu être ajouté.' ), $song['title'], $song['artist'], date( get_option( 'time_format' ), strtotime( $song['time'] ) ) );
@@ -376,43 +383,54 @@ class Campus_Daily_Playlist_Options {
 				$message = sprintf( __( 'Le morceau <strong>%s</strong> par <strong>%s</strong> programmé à <strong>%s</strong> n\'a pas été ajouté car <strong>sa durée est nulle</strong>.' ), $song['title'], $song['artist'], date( get_option( 'time_format' ), strtotime( $song['time'] ) ) );
 			}
 
-			if( $message !== false )
+			if( $message === false ) {
+				$added_songs++;
+			} else {
 				$this->message->add( 'error', $message );
+			}
 		}
 
-		//update option
-		$options = $this->playlist_options();
-		$new_options[$filename] = $date;
+		// If some songs added, update playlist options
+		if( $added_songs > 0 ) {
 
-		$options = array_merge( $new_options, $options );
+			//update option
+			$options = $this->playlist_options();
+			$new_options[$filename] = $date;
 
-		if( ! isset( $_POST['update_rows'] ) )
-			update_option( 'playlist_option', $options );
+			$options = array_merge( $new_options, $options );
 
-		// Update scope_option
-		$scope_option = $this->playlist_scope_option();
+			if( ! isset( $_POST['update_rows'] ) )
+				update_option( 'playlist_option', $options );
 
-		if( empty($scope_option['end']) && empty($scope_option['begin']) ) {
+			// Update scope_option
+			$scope_option = $this->playlist_scope_option();
 
-			$scope_option['end'] = $date;
-			$scope_option['begin'] = $date;
+			if( empty($scope_option['end']) && empty($scope_option['begin']) ) {
 
-		} elseif( strtotime($date) < strtotime($scope_option['end']) ) {
+				$scope_option['end'] = $date;
+				$scope_option['begin'] = $date;
 
-			$scope_option['end'] = $date;
+			} elseif( strtotime($date) < strtotime($scope_option['end']) ) {
 
-		} elseif( strtotime($date) > strtotime($scope_option['begin']) ) {
+				$scope_option['end'] = $date;
 
-			$scope_option['begin'] = $date;
+			} elseif( strtotime($date) > strtotime($scope_option['begin']) ) {
+
+				$scope_option['begin'] = $date;
+			}
+
+			update_option( 'playlist_scope_option', $scope_option );
+
+			// Add success message
+			if( isset( $_POST['update_rows'] ) ) {
+				$this->message->add( 'updated', sprintf( 'La playlist du <strong>%s</strong> à été mise à jour.', $str_date ) );
+			} else {
+				$this->message->add( 'updated', sprintf( 'La playlist du <strong>%s</strong> à été ajoutée.<br>%d/%d morceaux importés. <a href="%s">Gérer les termes exclus</a>', $str_date, $added_songs, $total_songs, add_query_arg( array( 'page' => 'campus_options' ), admin_url( 'options-general.php' ) . '#programmation-automatique' ) ) );
+			}
+
+		} else {
+			$this->message->add( 'error', 'Aucun morceau n\'a été importé' );
 		}
-
-		update_option( 'playlist_scope_option', $scope_option );
-
-
-		if( isset( $_POST['update_rows'] ) )
-			$this->message->add( 'updated', __('La playlist du <strong>' . $str_date . '</strong> à été mise à jour.') );
-		else
-			$this->message->add( 'updated', __('La playlist du <strong>' . $str_date . '</strong> à été ajoutée.') );
 
 		session_unset();
 		session_destroy();
@@ -420,14 +438,22 @@ class Campus_Daily_Playlist_Options {
 		return;
 	}
 
-	static function prepare_song( $song ) {
+	static function utf8_for_xml( $string ) {
+		return preg_replace ('/[^\x{0009}\x{000a}\x{000d}\x{0020}-\x{D7FF}\x{E000}-\x{FFFD}]+/u', ' ', $string);
+	}
 
+	static function can_upload_song( $song ) {
 		// Check for excluded terms
 		$excluded_terms = Campus_Daily_Playlist::get_excluded_terms();
 		foreach( $excluded_terms as $excluded_term ) {
 			if( preg_match( '/' . $excluded_term . '/', $song['category'] ) )
 				return false;
 		}
+
+		return true;
+	}
+
+	static function prepare_song( $song ) {
 
 		$song = array_merge( self::$default_song_fields, (array) $song );
 

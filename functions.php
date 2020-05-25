@@ -14,7 +14,7 @@
  * Set up the theme version number.
  *
  */
-define( 'THEME_VERSION' , '6.1.5.' . filemtime( get_parent_theme_file_path( '/style.css' ) ) );
+define( 'THEME_VERSION' , wp_get_theme()->get( 'Version' ) . '.' . filemtime( get_parent_theme_file_path( '/style.css' ) ) );
 
 
 /**
