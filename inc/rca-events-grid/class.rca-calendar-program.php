@@ -15,7 +15,7 @@ class RCA_Program_Calendar {
 		global $current_screen;
 		
 		$name = $program->getSummary();
-		$rebroadcasting = $program->getColorId() != '' ? true : false;
+		$rebroadcasting = strpos( sanitize_title( $program->getDescription() ), 'redif' ) !== false;
 		
 		$img = campus_get_category_thumbnail( array( 'width' => 320, 'height' => 320 ) );
 		$secondary_description = $edit_term_url = false;

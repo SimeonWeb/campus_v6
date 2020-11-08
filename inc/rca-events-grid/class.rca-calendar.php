@@ -259,6 +259,8 @@ class RCA_Calendar {
 					$program_slug = sanitize_title( $program_name );
 					$program_classes = array( 'program' );
 
+					$secondary_description = $program->getDescription();
+
 					$is_current = $is_rebroadcasting = false;
 
 					$wrapper_classes = array( 'programs-entry', 'hour-' . str_replace( ':', '-', $hour ), 'full', 'duration-' . $program->duration );
@@ -274,8 +276,9 @@ class RCA_Calendar {
 					}
 
 					// Check if it's a rebroadcasting
-					if( $this->calendar_id == $this->get_calendar_id( 'program' ) && $program->getColorId() != '' ) {
+					if( $this->calendar_id === $this->get_calendar_id( 'program' ) && strpos( sanitize_title( $program->getDescription() ), 'redif' ) !== false ) {
 						$is_rebroadcasting = true;
+						$secondary_description = 'Rediffusion';
 						$wrapper_classes[] = 'rebroadcasting';
 					}
 
@@ -306,13 +309,15 @@ class RCA_Calendar {
 							$term = $program->post_category;
 							$thumbnail = campus_get_category_thumbnail( array( 'term_id' => $term->term_id, 'taxonomy' => $term->taxonomy, 'width' => 300, 'height' => 300 ) );
 							$program_name = $term->name;
-							$secondary_description = get_term_meta( $term->term_id, 'secondary_description', true );
-							$secondary_description = $secondary_description ? $secondary_description : $program->getDescription();
 							$description = wpautop( campus_excerpt( $term->description, 300, false ) );
 							$link = get_term_link( $term, $term->taxonomy );
 							$day = get_term_meta( $term->term_id, 'day', true );
 							$hours = get_term_meta( $term->term_id, 'hours', true );
-
+							
+							if( ! $is_rebroadcasting ) {
+								$secondary_description = get_term_meta( $term->term_id, 'secondary_description', true ) ?? $secondary_description;
+							}
+							
 							// For list display
 							$program_schedules = sprintf( '<div class="taxonomy-schedules"><p class="taxonomy-schedules-day">%s</p><p class="taxonomy-schedules-hours">%s > %s</p></div>',
 								$day . ( $is_rebroadcasting ? ' (Rediffusion)' : '' ),
@@ -335,7 +340,6 @@ class RCA_Calendar {
 								$program->display_start,
 								$program->display_end
 							);
-							$secondary_description = $program->getDescription();
 							$description = $link = $program_aside = '';
 							$thumbnail = campus_get_category_thumbnail( array( 'width' => 300, 'height' => 300, 'class' => 'category-emission' ) );
 						}
