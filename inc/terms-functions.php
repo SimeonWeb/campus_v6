@@ -7,15 +7,33 @@
  * @since 6.0
  */
 
+function prepare_meta( $meta, $name, $is_array = false ) {
+	if( $is_array ) {
+		return isset( $meta[$name] ) && $meta[$name][0] ? unserialize( $meta[$name][0] ) : [];
+	}
+
+	return isset( $meta[$name] ) ? $meta[$name][0] : '';
+}
+
 /**
  * Define default social links fields and value
  *
  */
 function campus_term_social_links_fields( $term_id, $taxonomy = 'category' ) {
 
-	$term = get_term( $term_id, $taxonomy );
+	if( $term_id instanceof WP_Term ) {
+		$term = $term_id;
+		$term_id = $term->term_id;
+		$taxonomy = $term->taxonomy;
 
-	$external = get_term_meta( $term_id, 'external', true );
+	} else {
+	
+		$term = get_term( $term_id, $taxonomy );
+	}
+
+	$meta = get_term_meta( $term_id );
+
+	$external = prepare_meta( $meta, 'external', true );
 
 	$fields = array(
 		'facebook'	 => array(
@@ -23,42 +41,42 @@ function campus_term_social_links_fields( $term_id, $taxonomy = 'category' ) {
 			'title' 	  => 'Facebook',
 			'description' => 'L\'url de votre page Facebook',
 			'class'		  => 'widefat',
-			'value' 	  => get_term_meta( $term_id, 'facebook', true )
+			'value' 	  => prepare_meta( $meta, 'facebook' )
 		),
 		'twitter'	 => array(
 			'type'  	  => 'url',
 			'title' 	  => 'Twitter',
 			'description' => 'L\'url de votre compte Twitter',
 			'class'		  => 'widefat',
-			'value' 	  => get_term_meta( $term_id, 'twitter', true )
+			'value' 	  => prepare_meta( $meta, 'twitter' )
 		),
 		// 'google'	 => array(
 		// 	'type'  	  => 'url',
 		// 	'title' 	  => 'Google+',
 		// 	'description' => 'L\'url de votre page Google+',
 		// 	'class'		  => 'widefat',
-		// 	'value' 	  => get_term_meta( $term_id, 'google', true )
+		// 	'value' 	  => prepare_meta( $meta, 'google' )
 		// ),
 		'youtube'	 => array(
 			'type'  	  => 'url',
 			'title' 	  => 'YouTube',
 			'description' => 'L\'url de votre chaine YouTube',
 			'class'		  => 'widefat',
-			'value' 	  => get_term_meta( $term_id, 'youtube', true )
+			'value' 	  => prepare_meta( $meta, 'youtube' )
 		),
 		'instagram'	 => array(
 			'type'  	  => 'url',
 			'title' 	  => 'Instagram',
 			'description' => 'L\'url de votre compte Instagram',
 			'class'		  => 'widefat',
-			'value' 	  => get_term_meta( $term_id, 'instagram', true )
+			'value' 	  => prepare_meta( $meta, 'instagram' )
 		),
 		'soundcloud' => array(
 			'type'  	  => 'url',
 			'title' 	  => 'SoundCloud',
 			'description' => 'L\'url de votre profil SoundCloud',
 			'class'		  => 'widefat',
-			'value' 	  => get_term_meta( $term_id, 'soundcloud', true )
+			'value' 	  => prepare_meta( $meta, 'soundcloud' )
 		),
 		'itunes' 	 => array(
 			'type'  	  => 'url',
@@ -66,26 +84,26 @@ function campus_term_social_links_fields( $term_id, $taxonomy = 'category' ) {
 			'description' => 'L\'url de vos podcasts iTunes, <a href="https://linkmaker.itunes.apple.com/fr-fr?country=fr&mediaType=podcasts' . ( $term && ! is_wp_error( $term ) ? '&term=' . str_replace( ' ', '+', $term->name ) : '' ) . '" target="_blank">Obtenir le lien</a>',
 			'class'		  => 'widefat',
 			'icon'		  => 'apple-podcast',
-			'value' 	  => get_term_meta( $term_id, 'itunes', true )
+			'value' 	  => prepare_meta( $meta, 'itunes' )
 		),
 		'linkedin' => array(
 			'type'  	  => 'url',
 			'title' 	  => 'Linked In',
 			'description' => 'L\'url de votre profil Linked In',
 			'class'		  => 'widefat',
-			'value' 	  => get_term_meta( $term_id, 'linkedin', true )
+			'value' 	  => prepare_meta( $meta, 'linkedin' )
 		),
-		'rss' => array(
-			'type'  	  => 'url',
-			'title' 	  => 'RSS',
-			'description' => 'L\'url de flux rss de la catégorie (non modifiable)',
-			'class'		  => 'widefat',
-			'readonly'	=> true,
-			'attr'			=> array(
-				'readonly' => true
-			),
-			'value' 	  => get_term_feed_link( $term_id, $taxonomy ),
-		),
+		// 'rss' => array(
+		// 	'type'  	  => 'url',
+		// 	'title' 	  => 'RSS',
+		// 	'description' => 'L\'url de flux rss de la catégorie (non modifiable)',
+		// 	'class'		  => 'widefat',
+		// 	'readonly'	=> true,
+		// 	'attr'			=> array(
+		// 		'readonly' => true
+		// 	),
+		// 	'value' 	  => get_term_feed_link( $term_id, $taxonomy ),
+		// ),
 		'external'	 => array(
 			'type'  	  => 'composed',
 			'title' 	  => 'Lien externe',
@@ -584,20 +602,28 @@ function campus_get_broadcast_schedules_inline( $term_id ) {
  */
 function campus_get_term_social_links( $term_id = null, $taxonomy = null ) {
 
-	if( is_null( $term_id ) || is_null( $taxonomy ) ) {
-		$queried_object = get_queried_object();
-		if( isset( $queried_object->taxonomy ) ) {
-			$term_id  = $queried_object->term_id;
-			$taxonomy = $queried_object->taxonomy;
-		}
-	}
+	if( $term_id instanceof WP_Term ) {
+		$term = $term_id;
+		$term_id = $term->term_id;
+		$taxonomy = $term->taxonomy;
 
-	$term = get_term( $term_id, $taxonomy );
+	} else {
+	
+		if( is_null( $term_id ) || is_null( $taxonomy ) ) {
+			$queried_object = get_queried_object();
+			if( isset( $queried_object->taxonomy ) ) {
+				$term_id  = $queried_object->term_id;
+				$taxonomy = $queried_object->taxonomy;
+			}
+		}
+		
+		$term = get_term( $term_id, $taxonomy );
+	}
 
 	if( ! $term )
 		return false;
 
-	$links = campus_term_social_links_fields( $term_id, $taxonomy );
+	$links = campus_term_social_links_fields( $term );
 
 	if( ! is_archive() && $term->count ) {
 		$links['archive'] = array(
