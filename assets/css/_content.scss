@@ -100,12 +100,12 @@ blockquote {
 }
 
 a {
-	color: $color-two;
+	color: $color-one;
 	text-decoration: none;
-}
 
-a:hover {
-	color: $color-three;
+	&:hover {
+		color: $color-dark-one;
+	}
 }
 
 /* Form */

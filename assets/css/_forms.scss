@@ -41,6 +41,13 @@ Author URI: http://simeon.web-createur.com/
 .search-form-label {
 	font-size: 1.25em;
 	font-weight: bold;
+	letter-spacing: .5em;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+
+	@media screen and (min-width: 769px ) {
+		font-size: 1.5em;
+	}
 }
 
 .site,
@@ -70,7 +77,7 @@ Author URI: http://simeon.web-createur.com/
 		}
 
 		+ .search-form-label {
-			margin-top: 2em;
+			margin-top: 15vh;
 		}
 
 		.search-submit {

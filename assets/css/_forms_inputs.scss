@@ -107,7 +107,7 @@ input[type="submit"] {
 	line-height: 1;
 	padding: .6em 1em;
 	text-shadow: none;
-	transition: background-color 0.2s;
+	transition: background-color 300ms;
 }
 
 .button:hover,
@@ -116,7 +116,7 @@ button:hover,
 button:focus,
 input[type="button"]:hover,
 input[type="button"]:focus {
-	background: $color-two;
+	background: $color-dark-global;
 }
 
 /* Colors */
@@ -125,51 +125,35 @@ input[type="button"]:focus {
 button.button-primary,
 input[type="button"].button-primary,
 input[type="submit"] {
-	background-color: $color-two;
+	background-color: $color-one;
+
+	&:hover,
+	&:focus {
+		background-color: $color-dark-one;
+	}
 }
 
 .button.button-secondary,
 button.button-secondary,
 input[type="button"].button-secondary {
-	background-color: $color-three;
+	background-color: $color-two;
+
+	&:hover,
+	&:focus {
+		background-color: $color-dark-two;
+	}
 }
 
 .button.button-tertiary,
 button.button-tertiary,
 input[type="button"].button-tertiary,
 input[type="reset"] {
-	background-color: $color-one;
-}
+	background-color: $color-three;
 
-.button.button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:hover,
-button.button-primary:focus,
-input[type="button"].button-primary:hover,
-input[type="button"].button-primary:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-	background: $color-dark-two;
-}
-
-.button.button-secondary:hover,
-.button.button-secondary:focus,
-button.button-secondary:hover,
-button.button-secondary:focus,
-input[type="button"].button-secondary:hover,
-input[type="button"].button-secondary:focus {
-	background: $color-dark-three;
-}
-
-.button.button-tertiary:hover,
-.button.button-tertiary:focus,
-button.button-tertiary:hover,
-button.button-tertiary:focus,
-input[type="button"].button-tertiary:hover,
-input[type="button"].button-tertiary:focus,
-input[type="reset"]:hover,
-input[type="reset"]:focus {
-	background: $color-dark-one;
+	&:hover,
+	&:focus {
+		background-color: $color-dark-three;
+	}
 }
 
 /* Size */

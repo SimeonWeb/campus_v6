@@ -40,31 +40,35 @@ $permalink = get_term_link( $post_tag );
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
 
-	<div class="post-thumbnail">
-		<a href="<?php echo $permalink; ?>">
-			<?php echo campus_get_category_thumbnail( (array) $post_tag ); ?>
-		</a>
-	</div><!-- .post-thumbnail -->
+	<div class="list-item-container">
 
-	<div class="post-content">
-
-		<header class="entry-header">
+		<div class="post-thumbnail">
 			<a href="<?php echo $permalink; ?>">
-				<div class="entry-title"><?php echo apply_filters( 'the_title', $the_title ) ?></div>
+				<?php echo campus_get_category_thumbnail( (array) $post_tag ); ?>
 			</a>
-		</header><!-- .entry-header -->
+		</div><!-- .post-thumbnail -->
 
-		<div class="entry-content">
-			<a href="<?php echo $permalink; ?>">
-				<?php printf( _n( '%d article', '%d articles', $post_tag->count ), $post_tag->count ); ?>
-			</a>
-		</div><!-- .entry-content -->
+		<div class="post-content">
 
-		<aside class="entry-meta">
-			<a href="<?php echo $permalink; ?>">
-				<!--<span class="category-hierarchical-ancestor">Étiquette</span>--> <span class="category-hierarchical"><?php echo $post_tag->name; ?></span>
-			</a>
-		</aside>
+			<header class="entry-header">
+				<a href="<?php echo $permalink; ?>">
+					<div class="entry-title"><?php echo apply_filters( 'the_title', $the_title ) ?></div>
+				</a>
+			</header><!-- .entry-header -->
+
+			<div class="entry-content">
+				<a href="<?php echo $permalink; ?>">
+					<?php printf( _n( '%d article', '%d articles', $post_tag->count ), $post_tag->count ); ?>
+				</a>
+			</div><!-- .entry-content -->
+
+			<aside class="entry-meta">
+				<a href="<?php echo $permalink; ?>">
+					<!--<span class="category-hierarchical-ancestor">Étiquette</span>--> <span class="category-hierarchical"><?php echo $post_tag->name; ?></span>
+				</a>
+			</aside>
+
+		</div>
 
 	</div>
 

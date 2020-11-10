@@ -42,34 +42,38 @@ $permalink = get_term_link( $category );
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
 
-	<div class="post-thumbnail">
-		<a href="<?php echo $permalink; ?>">
-			<?php echo campus_get_category_thumbnail( (array) $category ); ?>
-		</a>
-	</div><!-- .post-thumbnail -->
+	<div class="list-item-container">
 
-	<div class="post-content">
-
-		<header class="entry-header">
+		<div class="post-thumbnail">
 			<a href="<?php echo $permalink; ?>">
-				<div class="entry-title"><?php echo apply_filters( 'the_title', $invert ? $category->name : $the_title ) ?></div>
+				<?php echo campus_get_category_thumbnail( (array) $category ); ?>
 			</a>
-		</header><!-- .entry-header -->
+		</div><!-- .post-thumbnail -->
 
-		<?php if( $category->count ) : ?>
-			<div class="entry-content">
+		<div class="post-content">
+
+			<header class="entry-header">
 				<a href="<?php echo $permalink; ?>">
-					<?php printf( _n( '%d article', '%d articles', $category->count ), $category->count ); ?>
+					<div class="entry-title"><?php echo apply_filters( 'the_title', $invert ? $category->name : $the_title ) ?></div>
 				</a>
-			</div><!-- .entry-content -->
-		<?php endif; ?>
+			</header><!-- .entry-header -->
 
-		<aside class="entry-meta">
-			<a href="<?php echo $permalink; ?>">
-				<?php echo $has_parent ? '<span class="category-hierarchical-ancestor">' . campus_get_term_parent_name( $category->term_id ) . '</span> ' : ''; ?><span class="category-hierarchical"><?php echo $invert ? $the_title : $category->name; ?></span>
-			</a>
-		</aside>
+			<?php if( $category->count ) : ?>
+				<div class="entry-content">
+					<a href="<?php echo $permalink; ?>">
+						<?php printf( _n( '%d article', '%d articles', $category->count ), $category->count ); ?>
+					</a>
+				</div><!-- .entry-content -->
+			<?php endif; ?>
 
+			<aside class="entry-meta">
+				<a href="<?php echo $permalink; ?>">
+					<?php echo $has_parent ? '<span class="category-hierarchical-ancestor">' . campus_get_term_parent_name( $category->term_id ) . '</span> ' : ''; ?><span class="category-hierarchical"><?php echo $invert ? $the_title : $category->name; ?></span>
+				</a>
+			</aside>
+
+		</div>
+	
 	</div>
 
 </article><!-- #post -->

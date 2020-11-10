@@ -46,13 +46,14 @@ Author URI: http://simeon.web-createur.com/
 /* Global */
 
 .menu-item-depth-0 > a:before {
-	background-color: $color-dark-two;
+	background-color: $color-two;
 }
 
 .nav-menu .sub-menu {
-	background: linear-gradient(to right, $color-dark-two 0%, rgba($color-dark-two, .95) 100%);
+	background: linear-gradient(to right, $color-two 0%, rgba($color-two, .95) 100%);
 }
 
+body.front,
 .mce-content-body[class*="page-template-page-alt"],
 .bg-gradient,
 .site-branding-text,
@@ -60,7 +61,9 @@ Author URI: http://simeon.web-createur.com/
 .site-content-contain,
 .mejs-layer,
 .main-navigation:before {
-	background: linear-gradient(to right, $color-dark-two 0%, $color-dark-one 100%);
+	background-image: linear-gradient(to bottom, $color-two 0%, $color-four 100%);
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 /* Content */
@@ -75,7 +78,7 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	h4,
 	h5,
 	h6 {
-		color: $color-two;
+		color: $color-one;
 	}
 
 	blockquote {
@@ -106,8 +109,7 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	}
 }
 
-.category-emission,
-.optimum {
+.category-emission {
 
 	&.wp-category-image,
 	.taxonomy-thumbnail,
@@ -120,6 +122,23 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	.mejs-time-current,
 	.mejs-time-live {
 		background-color: $color-two;
+	}
+}
+
+.category-musique,
+.optimum {
+
+	&.wp-category-image,
+	.taxonomy-thumbnail,
+	.post-thumbnail {
+		background-color: mix($color-one, $color-global, 40%);
+	}
+
+	.taxonomy-title,
+	.taxonomy-secondary-description,
+	.mejs-time-current,
+	.mejs-time-live {
+		background-color: $color-one;
 	}
 }
 
@@ -161,10 +180,15 @@ body.mce-content-body[class*="page-template-page-alt"] {
 .content-grid .program,
 .info-color {
 
-	&.category-emission,
-	&.category-musique {
+	&,
+	&.category-emission {
 		background: $color-two;
 		background:  linear-gradient(to top left, $color-two, mix($color-two, $color-global, 80%)) ;
+	}
+
+	&.category-musique {
+		background: $color-one;
+		background:  linear-gradient(to top left, $color-one, mix($color-one, $color-global, 80%)) ;
 	}
 
 	&.category-la-redac,
@@ -184,9 +208,16 @@ body.mce-content-body[class*="page-template-page-alt"] {
 
 .content-area[class*="content-list"] {
 
+	.type-post,
 	.category-emission {
 		.entry-title {
 			background-color: $color-two;
+		}
+	}
+
+	.category-musique {
+		.entry-title {
+			background-color: $color-one;
 		}
 	}
 
@@ -210,19 +241,21 @@ body.mce-content-body[class*="page-template-page-alt"] {
 
 	.hentry:not(.sticky) {
 
+		&.type-post,
 		&.category-emission {
-
 			@include grid-gradient( '.post-content', $color-two );
+		}
+
+		&.category-musique {
+			@include grid-gradient( '.post-content', $color-one );
 		}
 
 		&.category-la-redac,
 		&.category-actus {
-
 			@include grid-gradient( '.post-content', $color-three );
 		}
 
 		&.category-autres {
-
 			@include grid-gradient( '.post-content', $color-four );
 		}
 	}
@@ -235,6 +268,13 @@ body.mce-content-body[class*="page-template-page-alt"] {
 			.taxonomy-header .taxonomy-content {
 				background-color: rgba( mix( $color-two, $color-global, 40%), .7 );
 				background: linear-gradient( to top left, rgba( mix( $color-two, $color-global, 30%), .8 ), rgba( mix( $color-two, $color-global, 50%), .8 ) );
+			}
+		}
+
+		&.category-musique {
+			.taxonomy-header .taxonomy-content {
+				background-color: rgba( mix( $color-one, $color-global, 40%), .7 );
+				background: linear-gradient( to top left, rgba( mix( $color-one, $color-global, 30%), .8 ), rgba( mix( $color-one, $color-global, 50%), .8 ) );
 			}
 		}
 
@@ -262,6 +302,15 @@ body.mce-content-body[class*="page-template-page-alt"] {
 			.entry-title,
 			.entry-meta {
 				background-color: $color-two;
+			}
+		}
+
+		&.category-musique {
+
+			.entry-player,
+			.entry-title,
+			.entry-meta {
+				background-color: $color-one;
 			}
 		}
 
@@ -324,6 +373,18 @@ body.mce-content-body[class*="page-template-page-alt"] {
 				a,
 				.post-date {
 					background-color: $color-two;
+				}
+			}
+		}
+	}
+
+	&.category-musique {
+
+		.widget_recent_entries {
+			li:hover {
+				a,
+				.post-date {
+					background-color: $color-one;
 				}
 			}
 		}

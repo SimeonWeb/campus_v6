@@ -18,37 +18,41 @@ $content_loop++;
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'list-item' ); ?>>
 
-	<div class="post-thumbnail">
-		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			<?php the_post_thumbnail( 'sticky-thumbnail' ); ?>
-		</a>
-	</div><!-- .post-thumbnail -->
+	<div class="list-item-container">
 
-	<div class="post-content">
-
-		<header class="entry-header">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+		<div class="post-thumbnail">
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+				<?php the_post_thumbnail( 'sticky-thumbnail' ); ?>
 			</a>
-		</header><!-- .entry-header -->
+		</div><!-- .post-thumbnail -->
 
-		<div class="entry-content">
-			<a href="<?php the_permalink(); ?>">
-				<?php the_excerpt(); ?>
-			</a>
-		</div><!-- .entry-content -->
+		<div class="post-content">
 
-		<aside class="entry-meta entry-category">
-			<a href="<?php the_permalink(); ?>">
-				<?php campus_the_post_category(); ?>
-			</a>
-		</aside>
+			<header class="entry-header">
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+					<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+				</a>
+			</header><!-- .entry-header -->
 
-		<footer class="entry-meta entry-posted-on"><?php
-			campus_posted_on();
-		?></footer>
+			<div class="entry-content">
+				<a href="<?php the_permalink(); ?>">
+					<?php the_excerpt(); ?>
+				</a>
+			</div><!-- .entry-content -->
+
+			<aside class="entry-meta entry-category">
+				<a href="<?php the_permalink(); ?>">
+					<?php campus_the_post_category(); ?>
+				</a>
+			</aside>
+
+			<footer class="entry-meta entry-posted-on"><?php
+				campus_posted_on();
+			?></footer>
+		</div>
+
+		<?php campus_the_entry_player(); ?>
+
 	</div>
-
-	<?php campus_the_entry_player(); ?>
 
 </article><!-- #post-## -->

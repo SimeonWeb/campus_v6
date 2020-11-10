@@ -175,12 +175,11 @@ Author URI: http://simeon.web-createur.com/
 }
 
 @keyframes blockPlayerBgGradient {
-  0%,
-	100% {
-		background-position: 100% 0%
+  0% {
+		background-size: 200%;
 	}
-  50% {
-		background-position: 0% 100%
+  100% {
+		background-size: 800%;
 	}
 }
 

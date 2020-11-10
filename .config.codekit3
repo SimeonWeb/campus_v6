@@ -614,6 +614,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/images/juice-box.png": {
+		"ft": 32768,
+		"iS": 42345,
+		"oA": 0,
+		"oAP": "/assets/images/juice-box.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/images/live.png": {
+		"ft": 32768,
+		"iS": 4617,
+		"oA": 0,
+		"oAP": "/assets/images/live.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/images/logo-cache-podcast.png": {
 		"ft": 32768,
 		"iS": 23964,
@@ -1459,7 +1481,7 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/inc/smn-shortcodes/smn-shortcodes.php",
-		"oF": 2
+		"oF": 0
 		},
 	"/inc/smn-social/class-facebook.php": {
 		"cB": 0,

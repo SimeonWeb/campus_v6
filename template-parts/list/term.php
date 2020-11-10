@@ -14,6 +14,8 @@ $term_social_links = campus_get_term_social_links( $term->term_id, $term->taxono
 
 <article id="term-<?php echo $term->term_id; ?>" <?php campus_taxonomy_classes( 'list-item' ); ?>>
 
+	<div class="list-item-container">
+
     <header class="taxonomy-header">
 
         <div class="taxonomy-thumbnail">
@@ -50,6 +52,8 @@ $term_social_links = campus_get_term_social_links( $term->term_id, $term->taxono
             <a href="#" class="taxonomy-open-aside"><?php echo campus_get_svg( array( 'icon' => 'arrow-left', 'class' => 'icon-small' ) ); ?></a>
         <?php endif; ?>
 
-    </header>
+		</header>
+		
+	</div>
 
 </article><!-- #post-## -->

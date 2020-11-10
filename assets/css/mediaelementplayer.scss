@@ -294,23 +294,39 @@
     height: 0;
 
     .mejs-layer {
-        padding: 1px $wrap-padding 0;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding: 1px $wrap-padding 0;
+			pointer-events: none;
 
-        transition: transform 300ms ease-in-out;
+			opacity: 0;
+			transition: opacity 300ms;
 
-        &.toggled-on {
-            transform: translateY(-100%);
-        }
-    }
+			&.toggled-on {
+				opacity: 1;
+				pointer-events: all;
 
-    .mejs-layer-header {
-        display: flex;
-        align-items: center;
+				.mejs-layer-content {
+					transform: translate( 0, 0 );
+				}
+			}
 
-        background-color: $color-global;
-        font-weight: 900;
-        height: 3.125em;
-        padding: 0 1em;
+			&-content {
+				transition: transform 300ms ease-in-out;
+				transform: translate( 0, 1rem );
+			}
+
+			&-header {
+					display: flex;
+					align-items: center;
+	
+					background-color: $color-global;
+					font-weight: 900;
+					height: 3.125em;
+					padding: 0 1em;
+			}
     }
 }
 

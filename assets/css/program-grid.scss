@@ -241,6 +241,17 @@ Author URI: http://simeon.web-createur.com/
 
 	.programs-entries {
 		position: relative;
+
+		.programs-day:first-child {
+
+			.programs-entry:hover {
+				transform: translate( .3333rem, -.3333rem );
+
+				.program {
+					box-shadow: 0 0 0 1px $color-global, -.3333rem .3333rem 0 1px $color-global;
+				}
+			}
+		}
 	}
 
 	.programs-entry {
@@ -248,7 +259,18 @@ Author URI: http://simeon.web-createur.com/
 		left: 0;
 		width: 100%;
 		height: 4.16666666667%;
+		transition: transform 300ms ease-in-out, z-index 0ms linear 300ms;
 		z-index: 1;
+
+		&:hover {
+			transition: transform 300ms ease-in-out;
+			transform: translate( -.3333rem, -.3333rem );
+			z-index: 2;
+
+			.program {
+				box-shadow: 0 0 0 1px $color-global, .3333rem .3333rem 0 1px $color-global;
+			}
+		}
 
 		&.smaller {
 			font-size: .85em;
@@ -275,6 +297,13 @@ Author URI: http://simeon.web-createur.com/
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
+	}
+
+	.program {
+		width: calc( 100% - 1px );
+		height: calc( 100% - 1px );
+		box-shadow: 0 0 0 1px $color-global;
+		transition: box-shadow 300ms ease-in-out;
 	}
 
 	.icon-rebroadcasting {
@@ -385,8 +414,7 @@ Author URI: http://simeon.web-createur.com/
 	width: 100%;
 	height: 1px;
 	background-color: #fff;
-
-	opacity: .75;
+	filter: drop-shadow(0 0 .5rem $color-global);
 
 	z-index: 10;
 

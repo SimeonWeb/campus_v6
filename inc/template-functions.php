@@ -25,6 +25,7 @@ function campus_body_classes( $classes ) {
 	if( ! campus_is_ajax() )
 		$classes[] = 'html-loading';
 
+	$classes[] = 'front';
 	$classes[] = 'loading';
 
 	// Add class of group-blog to blogs with more than 1 published author.

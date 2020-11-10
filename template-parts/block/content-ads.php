@@ -25,7 +25,7 @@ if( $content_loop > 0 && $content_loop % 13 == 0 ) {
     $content_block_ad_index++;
 
     // Duplicate block
-    printf( '<article class="list-item type-block-ads type-block-ads-%s"><div class="post-thumbnail"><div class="wp-post-image">%s</div></div></article>',
+    printf( '<article class="list-item type-block-ads type-block-ads-%s"><div class="list-item-container"><div class="post-thumbnail"><div class="wp-post-image">%s</div></div></div></article>',
         zeroise( $content_block_ad_index, 2 ),
         $content_adrotate_group
     );

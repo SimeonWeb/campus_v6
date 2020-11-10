@@ -78,7 +78,6 @@ Author URI: http://simeon.web-createur.com/
 
 	.list-item {
 		position: relative;
-		display: flex;
 
 		background: inherit;
 		color: inherit;
@@ -86,6 +85,11 @@ Author URI: http://simeon.web-createur.com/
 		opacity: 1;
 		transform: translateY(0);
 		transition: transform 300ms ease-out, opacity 300ms;
+
+		.list-item-container {
+			position: relative;
+			display: flex;
+		}
 
 		.post-thumbnail,
 		.entry-player {
@@ -278,7 +282,7 @@ Author URI: http://simeon.web-createur.com/
 				width: $wrap-padding !important;
 				height: 100%;
 				top: 0;
-
+				left: -$wrap-padding;
 				background-color: transparent;
 				opacity: 1;
 

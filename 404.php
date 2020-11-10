@@ -34,17 +34,17 @@ get_header( $name ); ?>
 
 			?>
 
-			<article class="list-item is-empty"></article>
-			<article class="list-item is-empty"></article>
-			<article class="list-item is-empty"></article>
-			<article class="list-item is-empty"></article>
-			<article class="list-item is-empty"></article>
-			<article class="list-item is-empty"></article>
-			<article class="list-item is-empty"></article>
-			<article class="list-item is-empty"></article>
-			<article class="list-item is-empty"></article>
-			<article class="list-item is-empty"></article>
-			<article class="list-item is-empty"></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
+			<article class="list-item is-empty"><div class="list-item-container"></div></article>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

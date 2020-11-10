@@ -21,18 +21,19 @@ $line-height-header: 1.1;
 
 /* Colors */
 
-$color-global: #333;
-$color-dark-global: #222;
+$color-global: #222;
+$color-dark-global: #000;
+$color-dark-transparent: rgba(#222, .3);
 $color-light-global: #808080;
 $color-light-transparent: rgba(#fff, .3);
-$color-one: #e3ebba;
-$color-two: #0bb0b8;
-$color-three: #b7463f;
-$color-four: #0b5763;
-$color-dark-one: #56584e;
-$color-dark-two: #2b4c4e;
-$color-dark-three: #4d3735;
-$color-dark-four: #2b3a3d;
+$color-one: #ec1e79;
+$color-two: #0071bb;
+$color-three: #92278e;
+$color-four: #662d90;
+$color-dark-one: #97134d;
+$color-dark-two: #003f68;
+$color-dark-three: #3d103b;
+$color-dark-four: #2a123b;
 
 $content-background-color: #fff;
 
