@@ -12,6 +12,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Changelog
 
 
+## 6.2
+*Released: November 10, 2020*
+
+- New season, new colors ! 
+- Calendar: change rebroadcasting detection
+- Postcastlists shortcode: lower number of sql requests
+
 ## 6.1.6
 *Released: May 25, 2020*
 
