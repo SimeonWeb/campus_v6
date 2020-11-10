@@ -41,7 +41,7 @@ get_header( $name ); ?>
 		</main><!-- #main -->
 
 		<?php
-		if( $adrotate_group && $adrotate_group != '<!-- Either there are no banners, they are disabled or none qualified for this location! -->' ) :
+		if( $adrotate_group && substr( (string) $adrotate_group, 0, 4 ) !== '<!--' ) :
 
 			echo '<div class="popup-ad">';
 				echo $adrotate_group;

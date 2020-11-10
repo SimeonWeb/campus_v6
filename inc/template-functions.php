@@ -342,9 +342,7 @@ function campus_script_vars() {
 
 		// Popup
 		$adrotate_group = adrotate_group( get_option( 'popup_adrotate_group_id' ) );
-		if( $adrotate_group &&
-			( $adrotate_group != '<!-- Either there are no banners, they are disabled or none qualified for this location! -->' &&
-			  $adrotate_group != "<!-- Soit il n'y a pas de bannières, ils sont desactivées ou pas qualifiées pour cet endroit! -->" ) ) { // Merci adRotate de nous simplifier la vie !
+		if( $adrotate_group && substr( (string) $adrotate_group, 0, 4 ) !== '<!--' ) { // Merci adRotate de nous simplifier la vie !
 			$vars['popup']['liveHeight'] += 224;
 			$vars['popup']['podcastHeight'] += 224;
 		}

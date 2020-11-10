@@ -13,9 +13,7 @@ global $content_loop, $content_block_ad_index, $content_adrotate_group;
 
 if( $content_block_ad_index == 0 ) {
     $content_adrotate_group = adrotate_group( get_option( 'content_square_adrotate_group_id' ) );
-    if( ! $content_adrotate_group ||
-        ( $content_adrotate_group == '<!-- Either there are no banners, they are disabled or none qualified for this location! -->' ||
-          $content_adrotate_group == "<!-- Soit il n'y a pas de bannières, ils sont desactivées ou pas qualifiées pour cet endroit! -->" ) ) { // Merci adRotate de nous simplifier la vie !
+    if( ! $content_adrotate_group || substr( (string) $content_adrotate_group, 0, 4 ) === '<!--' ) { // Merci adRotate de nous simplifier la vie !
         return;
     }
 }
