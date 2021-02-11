@@ -145,6 +145,16 @@ function campus_taxonomy_classes( $class = '', $term_id = null, $taxonomy = null
 	printf( 'class="%s"', join( ' ', $classes ) );
 }
 
+function campus_get_sidebar_menu_id() {
+	$menu_id = false;
+
+	if ( is_archive() ) {
+		$menu_id = get_term_meta( get_queried_object_id(), 'sidebar_menu', true );
+	}
+
+	return $menu_id;
+}
+
 /**
  * Get sidebar id
  */
