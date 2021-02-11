@@ -12,6 +12,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Changelog
 
 
+## 6.2.1
+*Released: February 11, 2021*
+
+- Add menu in taxonomy sidebar
+
 ## 6.2
 *Released: November 10, 2020*
 
