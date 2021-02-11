@@ -169,24 +169,33 @@ function campus_tag_options_fields() {
 
 	$fields = array(
 		'thumbnail_id' => array(
-			'type'  	  => 'image_uploader',
-			'title' 	  => 'Image',
-			'value'		  => get_term_meta( $term_id, 'thumbnail_id', true ),
+			'type'  	    => 'image_uploader',
+			'title' 	    => 'Image',
+			'value'		    => get_term_meta( $term_id, 'thumbnail_id', true ),
 		),
-		'type'		   => array(
-			'type'  	  => 'text',
-			'title' 	  => 'Type de partenaire',
+		'type'		     => array(
+			'type'  	    => 'text',
+			'title' 	    => 'Type de partenaire',
 			'description' => 'Ex: Partenaire, mécène, subvention...',
-			'value'		  => get_term_meta( $term_id, 'type', true )
-		),
-		'social_links' => array(
-			'type'  	  => 'section',
-			'title' 	  => 'Liens'
+			'value'		    => get_term_meta( $term_id, 'type', true )
 		)
 	);
 
-	// Add social links fields
-	$fields = $fields + campus_term_social_links_fields( $term_id, 'post_tag' );
+	$fields = $fields 
+		+ [
+			'sidebar' => array(
+				'type'  	  => 'section',
+				'title' 	  => __( 'Sidebar' )
+			)
+		]
+		+ campus_term_sidebar_fields( $term_id, 'post_tag' )
+		+ [
+			'social_links' => array(
+				'type'  	  => 'section',
+				'title' 	  => 'Liens'
+			)
+		]
+		+ campus_term_social_links_fields( $term_id, 'post_tag' );
 
 	return $fields;
 }
@@ -331,7 +340,16 @@ function campus_presenter_options_fields() {
 			)
 		);
 
-		$fields = array_slice( $fields, 0, 1 ) + $new_fields + array_slice( $fields, 1 );
+		$fields = [
+				'sidebar' => array(
+					'type'  	  => 'section',
+					'title' 	  => __( 'Sidebar' )
+				)
+			]
+			+ campus_term_sidebar_fields( $term_id, 'post_tag' )
+			+ array_slice( $fields, 0, 1 ) 
+			+ $new_fields 
+			+ array_slice( $fields, 1 );
 
 	}
 

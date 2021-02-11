@@ -16,6 +16,47 @@ function prepare_meta( $meta, $name, $is_array = false ) {
 }
 
 /**
+ * Define sidebar fields and value
+ *
+ */
+function campus_term_sidebar_fields( $term_id, $taxonomy = 'category' ) {
+
+	if ( $term_id instanceof WP_Term ) {
+		$term = $term_id;
+		$term_id = $term->term_id;
+		$taxonomy = $term->taxonomy;
+
+	} else {
+	
+		$term = get_term( $term_id, $taxonomy );
+	}
+
+	$meta = get_term_meta( $term_id );
+
+	$menus = wp_get_nav_menus();
+	$menu_options = [
+		'' => 'Choisir un menu'
+	];
+
+	foreach( $menus as $menu ) {
+		$menu_options[$menu->term_id] = $menu->name;
+	}
+
+	$fields = [
+		'sidebar_menu' => [
+			'type'  	    => 'select',
+			'title' 	    => 'Menu',
+			'description' => 'Choisissez un menu à afficher dans la barre latérale de la catégorie',
+			'class'		    => 'widefat',
+			'value' 	    => prepare_meta( $meta, 'sidebar_menu' ),
+			'options'     => $menu_options
+		]
+	];
+
+	return $fields;
+}
+
+/**
  * Define default social links fields and value
  *
  */
