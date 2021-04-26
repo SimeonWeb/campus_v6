@@ -13,7 +13,7 @@ Theme URI: http://www.radiocampusangers.com/
 Author: Siméon ||/\() Web Créateur
 Author URI: http://simeon.web-createur.com/
 Description: Le thème 2014 de Radio Campus Angers, revisité pour la saison 2018 !
-Version: 6.2.1
+Version: 6.2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: campus
@@ -483,7 +483,7 @@ address {
 }
 
 pre {
-	background: rgba( $color-global, .3 );
+	background: rgba( $color-global, .1 );
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -491,16 +491,20 @@ pre {
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 1.4em 1.6em;
+	border-radius: 4px;
 }
 
 code,
 kbd,
 tt,
 var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
+	background: rgba( $color-global, .1 );
+	padding: .25em .5em;
+	border-radius: 4px;
 }
 
 abbr,
@@ -1805,6 +1809,10 @@ Regular Content
 	font-weight: 600;
 }
 
+.category-hierarchical .icon {
+	margin-right: .5em;
+}
+
 .fixed-header {
 	.title-hierarchical {
 		text-transform: uppercase;
@@ -2361,9 +2369,6 @@ body:not(.loaded) .content-area {
 								transition: transform 300ms ease-in-out;
 							}
 
-							.entry-title {
-							}
-
 							.entry-posted-on {
 								align-self: flex-start;
 								margin-top: -.9em;
@@ -2405,7 +2410,12 @@ body:not(.loaded) .content-area {
 							}
 						}
 					}
-
+					
+					&.category-murmures {
+						.category-hierarchical {
+							color: $color-murmures-3;
+						}
+					}
 				}
 
 				&.type-album {
@@ -3390,9 +3400,6 @@ body[class*="page-template-page-alt"] {
 			.term-list {
 				width: 100%;
 				width: calc( 100% + #{$wrap-padding} );
-			}
-
-			.podcast-list {
 			}
 		}
 	}
@@ -4436,17 +4443,6 @@ Colors
 @import 'assets/css/colors';
 
 /*--------------------------------------------------------------
-Touch devices
---------------------------------------------------------------*/
-
-html.touch {
-
-	// .menu-item-depth-0 > a {
-	// 	pointer-events: none;
-	// }
-}
-
-/*--------------------------------------------------------------
 Media Queries
 --------------------------------------------------------------*/
 
@@ -4733,10 +4729,10 @@ Media Queries
 
 				a {
 					opacity: .6;
-					transition: opacity 300ms;
+					transition: opacity 300ms linear 200ms, color 300ms linear 200ms;
 
 					&::before {
-						background-color: #1c3346;
+						background-color: $color-murmures-1;
 					}
 				}
 
@@ -4744,6 +4740,7 @@ Media Queries
 
 					a {
 						opacity: 1;
+						color: $color-murmures-3;
 					}
 				}
 			}

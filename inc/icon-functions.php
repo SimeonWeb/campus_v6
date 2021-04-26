@@ -54,6 +54,11 @@ function campus_get_svg( $args = array() ) {
 		return __( 'Please define an SVG icon filename.', 'campus' );
 	}
 
+	// Has an icon.
+	if ( false === array_key_exists( $args['icon'], campus_icons() ) ) {
+		return;
+	}
+
 	// Set defaults.
 	$defaults = array(
 		'icon'        => '',
@@ -303,7 +308,8 @@ function campus_icons() {
 		'edit' => 'Modifier',
 		'menu' => 'Menu',
 		'apple-podcast' => 'Apple Podcast',
-		'rss' => 'RSS'
+		'rss' => 'RSS',
+		'murmures' => 'Murmures'
 	);
 
 	return $campus_icons;

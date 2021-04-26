@@ -12,6 +12,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Changelog
 
 
+
+## 6.2.2
+*Released: April 26, 2021*
+
+- Add Murmures colors
+- Add icon to `campus_get_post_category` to display Murmures icon. !! Can display any icon if it matches category slug !!
+- Fix: Add `THEME_VERSION` to stylesheet enqueue
+- Improve `pre` & `code` display
+
 ## 6.2.1
 *Released: February 11, 2021*
 

@@ -175,6 +175,22 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	}
 }
 
+.category-murmures {
+
+	&.wp-category-image,
+	.taxonomy-thumbnail,
+	.post-thumbnail {
+		background-color: mix($color-murmures-1, $color-global, 40%);
+	}
+
+	.taxonomy-title,
+	.taxonomy-secondary-description,
+	.mejs-time-current,
+	.mejs-time-live {
+		background-color: $color-murmures-1;
+	}
+}
+
 /* Program */
 
 .content-grid .program,
@@ -200,6 +216,11 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	&.category-autres {
 		background: $color-four;
 		background:  linear-gradient(to top left, $color-four, mix($color-four, $color-global, 80%)) ;
+	}
+
+	&.category-murmures {
+		background: $color-murmures-1;
+		background:  linear-gradient(to top left, $color-murmures-1, mix($color-murmures-1, $color-global, 80%)) ;
 	}
 }
 
@@ -233,6 +254,12 @@ body.mce-content-body[class*="page-template-page-alt"] {
 			background-color: $color-four;
 		}
 	}
+
+	.category-murmures {
+		.entry-title {
+			background-color: $color-murmures-1;
+		}
+	}
 }
 
 /* Grid */
@@ -257,6 +284,10 @@ body.mce-content-body[class*="page-template-page-alt"] {
 
 		&.category-autres {
 			@include grid-gradient( '.post-content', $color-four );
+		}
+
+		&.category-murmures {
+			@include grid-gradient( '.post-content', $color-murmures-1 );
 		}
 	}
 
@@ -290,6 +321,13 @@ body.mce-content-body[class*="page-template-page-alt"] {
 			.taxonomy-header .taxonomy-content {
 				background-color: rgba( mix( $color-four, $color-global, 40%), .7 );
 				background: linear-gradient( to top left, rgba( mix( $color-four, $color-global, 30%), .8 ), rgba( mix( $color-four, $color-global, 50%), .8 ) );
+			}
+		}
+
+		&.category-murmures {
+			.taxonomy-header .taxonomy-content {
+				background-color: rgba( mix( $color-murmures-1, $color-global, 40%), .7 );
+				background: linear-gradient( to top left, rgba( mix( $color-murmures-1, $color-global, 30%), .8 ), rgba( mix( $color-murmures-1, $color-global, 50%), .8 ) );
 			}
 		}
 	}
@@ -330,6 +368,15 @@ body.mce-content-body[class*="page-template-page-alt"] {
 			.entry-title,
 			.entry-meta {
 				background-color: $color-four;
+			}
+		}
+
+		&.category-murmures {
+
+			.entry-player,
+			.entry-title,
+			.entry-meta {
+				background-color: $color-murmures-1;
 			}
 		}
 	}
@@ -410,6 +457,18 @@ body.mce-content-body[class*="page-template-page-alt"] {
 				a,
 				.post-date {
 					background-color: $color-four;
+				}
+			}
+		}
+	}
+
+	&.category-murmures {
+
+		.widget_recent_entries {
+			li:hover {
+				a,
+				.post-date {
+					background-color: $color-murmures-1;
 				}
 			}
 		}

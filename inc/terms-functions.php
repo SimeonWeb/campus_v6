@@ -391,13 +391,15 @@ function campus_get_post_category( $id = null, $link = false, $depth = 3 ) {
 
 	if( $link ) {
 
-		$output .= sprintf( '<a href="%s" class="category-hierarchical">%s</a>',
+		$output .= sprintf( '<a href="%s" class="category-hierarchical">%s<span class="text">%s</span></a>',
 			get_category_link( $category->term_id ),
+			campus_get_svg( array( 'icon' => $post_category->slug ) ),
 			$post_category->name
 		);
 	} else {
 
-		$output .= sprintf( '<span class="category-hierarchical">%s</span>',
+		$output .= sprintf( '<span class="category-hierarchical">%s<span class="text">%s</span></span>',
+			campus_get_svg( array( 'icon' => $post_category->slug ) ),
 			$post_category->name
 		);
 	}

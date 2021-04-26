@@ -322,7 +322,7 @@ function campus_scripts() {
 	wp_enqueue_style( 'campus-fonts', campus_fonts_url(), array(), null );
 
 	// Theme stylesheet.
-	wp_enqueue_style( 'campus-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'campus-style', get_stylesheet_uri(), [], THEME_VERSION );
 
 	// Program grid
 	wp_enqueue_style( 'campus-program-grid' );
