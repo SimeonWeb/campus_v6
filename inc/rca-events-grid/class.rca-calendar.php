@@ -242,8 +242,8 @@ class RCA_Calendar {
 			$header_day .= sprintf( '<div class="programs-title %s"><div class="program-day-title">%s</div></div>',
 				join( ' ', $day_classes ),
 				sprintf( '<span class="short">%s</span><span class="long">%s</span>',
-			    	ucfirst( date_i18n( 'D\. j\/m', strtotime( $date ) ) ),
-			    	ucfirst( date_i18n( 'l j F', strtotime( $date ) ) )
+			    	ucfirst( date_i18n( 'D\. j\/m', strtotime( $date ) + 7200 ) ),
+			    	ucfirst( date_i18n( 'l j F', strtotime( $date ) + 7200 ) )
 			    )
 			);
 
@@ -336,7 +336,7 @@ class RCA_Calendar {
 
 							// For list display
 							$program_schedules = sprintf( '<div class="taxonomy-schedules"><p class="taxonomy-schedules-day">%s</p><p class="taxonomy-schedules-hours">%s > %s</p></div>',
-								ucfirst( date_i18n( 'l', $program->start_timestamp ) ) . ( $is_rebroadcasting ? ' (Rediffusion)' : '' ),
+								ucfirst( date_i18n( 'l', $program->start_timestamp + 7200 ) ) . ( $is_rebroadcasting ? ' (Rediffusion)' : '' ),
 								$program->display_start,
 								$program->display_end
 							);

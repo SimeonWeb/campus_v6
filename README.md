@@ -13,6 +13,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 
+## 6.2.3
+*Released: October 04, 2021*
+- Fix (ugly mode) program grid header date 
+
 ## 6.2.2
 *Released: April 26, 2021*
 
