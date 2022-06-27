@@ -633,6 +633,11 @@ require get_parent_theme_file_path( '/inc/terms-functions.php' );
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 /**
+ * Load powerpress addons class.
+ */
+require get_parent_theme_file_path( '/inc/class-powerpress-addons.php' );
+
+/**
  * Load admin functions.
  */
 if( is_admin() ) {

@@ -13,6 +13,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 
+## 6.2.4
+*Released: June 27, 2022*
+- Add powerpress category helpers
+
 ## 6.2.3
 *Released: October 04, 2021*
 - Fix (ugly mode) program grid header date 

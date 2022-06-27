@@ -7,7 +7,7 @@
       "uuidString" : "38CB8487-0A34-4F70-9B5D-963F3962C666"
     }
   ],
-  "creatorBuild" : "34127",
+  "creatorBuild" : "34335",
   "files" : {
     "\/.gitignore" : {
       "cB" : 0,
@@ -36,6 +36,7 @@
     "\/assets\/css\/_accordion.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -50,6 +51,7 @@
     "\/assets\/css\/_animations.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -64,6 +66,7 @@
     "\/assets\/css\/_colors.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -78,6 +81,7 @@
     "\/assets\/css\/_columns.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -92,6 +96,7 @@
     "\/assets\/css\/_content_list.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -106,6 +111,7 @@
     "\/assets\/css\/_content.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -120,6 +126,7 @@
     "\/assets\/css\/_forms_inputs.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -134,6 +141,7 @@
     "\/assets\/css\/_forms.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -148,6 +156,7 @@
     "\/assets\/css\/_global.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -162,6 +171,7 @@
     "\/assets\/css\/_variables.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -188,6 +198,7 @@
     "\/assets\/css\/admin.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -214,6 +225,7 @@
     "\/assets\/css\/editor-style.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -264,6 +276,7 @@
     "\/assets\/css\/mediaelementplayer.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -290,6 +303,7 @@
     "\/assets\/css\/program-grid.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -316,6 +330,7 @@
     "\/assets\/css\/sharing.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -342,6 +357,7 @@
     "\/assets\/css\/wp-mediaelement.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -717,7 +733,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/admin-media-upload.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/admin-media-upload.min.js" : {
@@ -728,7 +744,29 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/admin-media-upload.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/admin-powerpress-addons.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/admin-powerpress-addons.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/assets\/js\/admin-powerpress-addons.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/js\/admin-powerpress-addons.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/admin.js" : {
@@ -739,7 +777,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/admin.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/admin.min.js" : {
@@ -750,7 +788,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/admin.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/ajaxify.js" : {
@@ -761,7 +799,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/ajaxify.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/ajaxify.min.js" : {
@@ -772,7 +810,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/ajaxify.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/customize-controls.js" : {
@@ -783,7 +821,7 @@
       "oA" : 1,
       "oAP" : "\/assets\/js\/customize-controls.min.js",
       "oF" : 1,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/customize-preview.js" : {
@@ -794,7 +832,7 @@
       "oA" : 1,
       "oAP" : "\/assets\/js\/customize-preview.min.js",
       "oF" : 1,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/customize-preview.min.js" : {
@@ -805,7 +843,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/customize-preview.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/global.js" : {
@@ -816,7 +854,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/global.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/global.min.js" : {
@@ -827,7 +865,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/global.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/history.js" : {
@@ -838,7 +876,7 @@
       "oA" : 1,
       "oAP" : "\/assets\/js\/history.min.js",
       "oF" : 1,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/html5.js" : {
@@ -849,7 +887,7 @@
       "oA" : 1,
       "oAP" : "\/assets\/js\/html5.min.js",
       "oF" : 1,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/i18n.html" : {
@@ -868,7 +906,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-cs.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-de.js" : {
@@ -879,7 +917,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-de.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-es.js" : {
@@ -890,7 +928,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-es.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-fr.js" : {
@@ -901,7 +939,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-fr.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-hr.js" : {
@@ -912,7 +950,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-hr.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-it.js" : {
@@ -923,7 +961,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-it.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-ja.js" : {
@@ -934,7 +972,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-ja.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-nl.js" : {
@@ -945,7 +983,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-nl.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-pl.js" : {
@@ -956,7 +994,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-pl.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-pt-BR.js" : {
@@ -967,7 +1005,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-pt-BR.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-sl.js" : {
@@ -978,7 +1016,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-sl.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-sv.js" : {
@@ -989,7 +1027,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-sv.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/i18n\/jquery.ui.timepicker-tr.js" : {
@@ -1000,7 +1038,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/i18n\/jquery.ui.timepicker-tr.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/infinity.js" : {
@@ -1011,7 +1049,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/infinity.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/infinity.min.js" : {
@@ -1022,7 +1060,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/infinity.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/jquery.scrollTo.js" : {
@@ -1033,7 +1071,7 @@
       "oA" : 1,
       "oAP" : "\/assets\/js\/jquery.scrollTo.min.js",
       "oF" : 1,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/jquery.ui.timepicker.js" : {
@@ -1044,7 +1082,7 @@
       "oA" : 1,
       "oAP" : "\/assets\/js\/jquery.ui.timepicker.min.js",
       "oF" : 1,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/mediaelement.js" : {
@@ -1055,7 +1093,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/mediaelement.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/mediaelement.min.js" : {
@@ -1066,7 +1104,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/mediaelement.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/navigation.js" : {
@@ -1077,7 +1115,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/navigation.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/navigation.min.js" : {
@@ -1088,7 +1126,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/navigation.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/program-grid.js" : {
@@ -1099,7 +1137,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/program-grid.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/program-grid.min.js" : {
@@ -1110,7 +1148,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/program-grid.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/sharing.js" : {
@@ -1121,7 +1159,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/sharing.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/sharing.min.js" : {
@@ -1132,7 +1170,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/js\/sharing.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/assets\/js\/skip-link-focus-fix.js" : {
@@ -1143,7 +1181,7 @@
       "oA" : 1,
       "oAP" : "\/assets\/js\/skip-link-focus-fix.min.js",
       "oF" : 1,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/comments.php" : {
@@ -1322,6 +1360,14 @@
       "oAP" : "\/inc\/class-faq-post-type.php",
       "oF" : 0
     },
+    "\/inc\/class-powerpress-addons.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/inc\/class-powerpress-addons.php",
+      "oF" : 0
+    },
     "\/inc\/customizer.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1377,6 +1423,7 @@
     "\/inc\/rca-events-grid\/assets\/css\/admin-grid.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -1396,7 +1443,7 @@
       "oA" : 0,
       "oAP" : "\/inc\/rca-events-grid\/assets\/js\/admin-grid.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/inc\/rca-events-grid\/assets\/js\/admin-grid.min.js" : {
@@ -1407,7 +1454,7 @@
       "oA" : 0,
       "oAP" : "\/inc\/rca-events-grid\/assets\/js\/admin-grid.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/inc\/rca-events-grid\/class.google-calendar.php" : {
@@ -1506,7 +1553,7 @@
       "oA" : 0,
       "oAP" : "\/inc\/smn-shortcodes\/custom-shortcodes-buttons.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/inc\/smn-shortcodes\/smn-shortcodes-buttons.min.js" : {
@@ -1517,7 +1564,7 @@
       "oA" : 0,
       "oAP" : "\/inc\/smn-shortcodes\/smn-shortcodes-buttons.min.min.js",
       "oF" : 0,
-      "sC" : 1,
+      "sC" : 3,
       "tS" : 0
     },
     "\/inc\/smn-shortcodes\/smn-shortcodes.php" : {
@@ -1803,6 +1850,7 @@
     "\/style.scss" : {
       "aP" : 1,
       "bl" : 0,
+      "co" : 0,
       "dP" : 10,
       "ec" : 1,
       "ft" : 4,
@@ -2298,144 +2346,6 @@
     "buildFolderActive" : 0,
     "buildFolderName" : "build",
     "cleanBuild" : 1,
-    "coffeeLintFlags2" : {
-      "arrow_spacing" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "camel_case_classes" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "colon_assignment_spacing" : {
-        "active" : 0,
-        "flagValue" : 1
-      },
-      "cyclomatic_complexity" : {
-        "active" : 0,
-        "flagValue" : 10
-      },
-      "duplicate_key" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "empty_constructor_needs_parens" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "ensure_comprehensions" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "indentation" : {
-        "active" : 1,
-        "flagValue" : 2
-      },
-      "line_endings" : {
-        "active" : 0,
-        "flagValue" : 0
-      },
-      "max_line_length" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "missing_fat_arrows" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "newlines_after_classes" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "no_backticks" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_debugger" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_empty_functions" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_empty_param_list" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_implicit_braces" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_implicit_parens" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_interpolation_in_single_quotes" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_nested_string_interpolation" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_plusplus" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_private_function_fat_arrows" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_stand_alone_at" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_tabs" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_this" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_throwing_strings" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_trailing_semicolons" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_trailing_whitespace" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "no_unnecessary_double_quotes" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "no_unnecessary_fat_arrows" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "non_empty_constructor_needs_parens" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "prefer_english_operator" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "space_operators" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "spacing_after_comma" : {
-        "active" : 1,
-        "flagValue" : -1
-      }
-    },
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
@@ -2935,7 +2845,8 @@
         "optionString" : ""
       },
       "no-multi-assign" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'ignoreNonDeclaration': false}"
       },
       "no-multi-spaces" : {
         "active" : 0,
@@ -3058,7 +2969,8 @@
         "active" : 0
       },
       "no-sequences" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'allowInParentheses': true}"
       },
       "no-setter-return" : {
         "active" : 1
@@ -3145,6 +3057,9 @@
       },
       "no-unused-labels" : {
         "active" : 1
+      },
+      "no-unused-private-class-members" : {
+        "active" : 0
       },
       "no-unused-vars" : {
         "active" : 1,
@@ -3264,6 +3179,9 @@
       "prefer-numeric-literals" : {
         "active" : 0
       },
+      "prefer-object-has-own" : {
+        "active" : 0
+      },
       "prefer-object-spread" : {
         "active" : 0
       },
@@ -3296,7 +3214,8 @@
         "optionString" : "'always'"
       },
       "require-atomic-updates" : {
-        "active" : 0
+        "active" : 0,
+        "optionString" : "{'allowProperties': false}"
       },
       "require-await" : {
         "active" : 0
@@ -3422,354 +3341,6 @@
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 1,
     "jsCheckerReservedNamesString" : "",
-    "jsHintFlags2" : {
-      "asi" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "bitwise" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "boss" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "browser" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "browserify" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "camelcase" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "couch" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "curly" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "debug" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "devel" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "dojo" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "elision" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "eqeqeq" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "eqnull" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "es3" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "esnext" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "evil" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "expr" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "forin" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "freeze" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "funcscope" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "futurehostile" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "globalstrict" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "immed" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "indent" : {
-        "active" : 0,
-        "flagValue" : 4
-      },
-      "iterator" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "jasmine" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "jquery" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "lastsemic" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "latedef" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "laxbreak" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "laxcomma" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "loopfunc" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "maxcomplexity" : {
-        "active" : 0,
-        "flagValue" : 10
-      },
-      "maxdepth" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "maxlen" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "maxparams" : {
-        "active" : 0,
-        "flagValue" : 3
-      },
-      "maxstatements" : {
-        "active" : 0,
-        "flagValue" : 4
-      },
-      "mocha" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "mootools" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "moz" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "multistr" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "newcap" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "noarg" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "nocomma" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "node" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "noempty" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "nonbsp" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "nonew" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "nonstandard" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "notypeof" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "noyield" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "onecase" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "phantom" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "plusplus" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "proto" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "prototypejs" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "qunit" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "regexp" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "rhino" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "scripturl" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "shadow" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "shelljs" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "singleGroups" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "strict" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "sub" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "supernew" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "typed" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "undef" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "unused" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "varstmt" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "withstmt" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "worker" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "wsh" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "yui" : {
-        "active" : 0,
-        "flagValue" : -1
-      }
-    },
-    "jsLintFlags2" : {
-      "bitwise" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "browser" : {
-        "active" : 1,
-        "flagValue" : -1
-      },
-      "couch" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "devel" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "es6" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "eval" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "for" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "maxlen" : {
-        "active" : 0,
-        "flagValue" : 150
-      },
-      "node" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "this" : {
-        "active" : 0,
-        "flagValue" : -1
-      },
-      "white" : {
-        "active" : 0,
-        "flagValue" : -1
-      }
-    },
     "languageDefaultsCOFFEE" : {
       "autoOutputAction" : 0,
       "autoOutputPathFilenamePattern" : "*.js",
@@ -3780,7 +3351,6 @@
       "minifierStyle" : 1,
       "outputStyle" : 0,
       "sourceMapStyle" : 0,
-      "syntaxCheckerStyle" : 1,
       "transpilerStyle" : 1
     },
     "languageDefaultsCSS" : {
@@ -3845,7 +3415,7 @@
       "bundleFormat" : 0,
       "minifierStyle" : 1,
       "sourceMapStyle" : 0,
-      "syntaxCheckerStyle" : 1,
+      "syntaxCheckerStyle" : 3,
       "transpilerStyle" : 0
     },
     "languageDefaultsJSON" : {
@@ -4078,6 +3648,7 @@
     "tsEmitBOM" : 0,
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
+    "tsExactOptionalPropertyTypes" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
@@ -4086,6 +3657,7 @@
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
+    "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
     "tsNoImplicitUseStrict" : 0,
@@ -4106,6 +3678,7 @@
     "tsStripInternal" : 0,
     "tsSuppressExcessPropertyErrors" : 0,
     "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseUnknownInCatchVariables" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {
