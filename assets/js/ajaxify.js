@@ -54,16 +54,26 @@
 		};
 
 		// Get all POSTable data from form
-		var getPostData = function( selector ) {
-			var postData = {};
+		var getFormData = function(selector) {
+			const formData = new FormData(selector);
 
-			$.each($(selector).find('[name]'), function(index,el) {
-				el = $(el);
-				postData[el.attr('name')] = el.attr('value');
-			});
+			const data = {};
+			formData.forEach((value, key) => (data[key] = value));
 
-			return postData;
+			return data;
 		};
+
+		var getFormUrlParams = function(data) {
+			const formData = Object.entries(data)
+
+			if (formData.length === 0) {
+				return ""
+			}
+
+			return '?' + formData.map(([key, value]) => {
+				return key + "=" + value
+			}).join('&');
+		}
 
 		var parseData = function( data, referer ) {
 
@@ -199,7 +209,7 @@
 					parseData( data, url );
 				},
 				error: function(jqXHR, textStatus/* , errorThrown */){
-					console.log(textStatus, jqXHR.responseText);
+					console.error(textStatus, jqXHR.responseText);
 					document.location.href = url;
 					return false;
 				}
@@ -216,10 +226,10 @@
 				$body.addClass('loading').removeClass('loaded');
 				$document.trigger('ajaxloading');
 
-				var url = $(this).attr('action').length ? $(this).attr('action') : campus.url,
-					method = $(this).attr('method').length ? $(this).attr('method') : 'get',
-					data = getPostData( this ),
-					fullUrl = url + '?' + $.param( data );
+				const url = $(this).attr('action').length ? $(this).attr('action') : campus.url
+				const method = $(this).attr('method').length ? $(this).attr('method') : 'get'
+				const data = getFormData(this)
+				const fullUrl = url + getFormUrlParams(data)
 
 				data.ajax = true;
 
@@ -240,7 +250,7 @@
 							$window.trigger( 'statechange' );
 						},
 						error: function(jqXHR, textStatus/* , errorThrown */){
-							console.log(textStatus, jqXHR.responseText);
+							console.error(textStatus, jqXHR.responseText);
 							//document.location.href = referer;
 							// Reload
 							$window.trigger( 'statechange' );

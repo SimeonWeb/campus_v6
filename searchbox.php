@@ -10,7 +10,7 @@
 
 ?>
 
-<?php $unique_id = esc_attr( uniqid( 'search-form-' ) ); ?>
+<?php /*$unique_id = esc_attr( uniqid( 'search-form-' ) );*/ ?>
 
 <div id="search-box" class="box wrap search-box type-radio-content">
 
