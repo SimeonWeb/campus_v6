@@ -12,6 +12,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Changelog
 
 
+## 6.2.5
+*Released: July 7, 2022*
+- Fix ajax form submit & improve search form structure
+- Fix campus_player_post_classes enclosure check
 
 ## 6.2.4
 *Released: June 27, 2022*
