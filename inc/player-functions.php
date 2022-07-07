@@ -18,7 +18,7 @@ function campus_player_post_classes( $classes ) {
 	$enclosure = powerpress_get_enclosure_data( get_the_ID() );
 	$current_podcast = campus_is_current_podcast();
 
-	if( $enclosure['url'] )
+	if( $enclosure && $enclosure['url'] )
 		$classes[] = 'with-enclosure';
 
 	if( $current_podcast )
