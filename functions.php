@@ -672,7 +672,7 @@ if( is_admin() ) {
 /**
  * Load social libraries.
  */
-require get_parent_theme_file_path( '/inc/smn-social/smn-social.php' );
+// require get_parent_theme_file_path( '/inc/smn-social/smn-social.php' );
 
 /**
  * Load shortcode libraries.

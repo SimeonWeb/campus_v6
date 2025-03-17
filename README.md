@@ -12,6 +12,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Changelog
 
 
+## 6.3.0
+*Released: March 17, 2025*
+- Support for php 8.*
+- Update google/apiClient to ^2.15.0
+- Remove smn-social
+
 ## 6.2.5
 *Released: July 7, 2022*
 - Fix ajax form submit & improve search form structure
