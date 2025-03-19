@@ -12,6 +12,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Changelog
 
 
+## 6.3.1
+*Released: March 20, 2025*
+- Fix author-category
+
 ## 6.3.0
 *Released: March 17, 2025*
 - Support for php 8.*

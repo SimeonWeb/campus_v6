@@ -241,7 +241,7 @@ if (!class_exists('SimplePanel')){
          */
         public function user_default_category_option($false){
             $cat = $this->get_user_cat();
-            if (!empty($cat) && count($cat) > 0){
+            if ($cat) {
                 return $cat;
             }
             return false;
@@ -261,7 +261,7 @@ if (!class_exists('SimplePanel')){
          */
         public function user_default_category($post_data,$con_stactu){
             $cat = $this->get_user_cat($post_data['post_author']);
-            if (!empty($cat) && $cat > 0){
+            if ($cat) {
                 $post_data['tax_input']['category'] = array($cat);
             }
             return $post_data;
@@ -296,7 +296,8 @@ if (!class_exists('SimplePanel')){
         public function remove_quick_edit(){
 			$current_user = wp_get_current_user();
             $cat = $this->get_user_cat($current_user->ID);
-            if (!empty($cat) && count($cat) > 0){
+
+            if ($cat) {
                 echo '<style>.inline-edit-categories{display: none !important;}</style>';
             }
         }
@@ -311,7 +312,7 @@ if (!class_exists('SimplePanel')){
 
             //get author categories
             $cat = $this->get_user_cat($current_user->ID);
-            if (!empty($cat) && count($cat) > 0){
+            if ($cat) {
                 //remove default metabox
                 remove_meta_box('categorydiv', 'post', 'side');
                 //add user specific categories
@@ -476,19 +477,18 @@ if (!class_exists('SimplePanel')){
         }
 
         static public function get_user_cat( $user_id = null ) {
-
             if( $user_id === null ) {
-
 				$current_user = wp_get_current_user();
                 $user_id = $current_user->ID;
             }
 
             $cat = get_user_meta( $user_id, '_author_cat', true );
 
-            if( empty( $cat ) || count( $cat ) <= 0 || ! is_array( $cat ) )
-                return false;
-            else
+            if (empty($cat) || count($cat) === 0 || ! is_array($cat)) {
+                return null;
+            } else {
                 return $cat[0];
+            }
 
         }
 
