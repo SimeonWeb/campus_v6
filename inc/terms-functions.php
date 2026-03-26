@@ -233,7 +233,7 @@ function campus_get_the_category_by_priority( $post_id = null, $parent_id = null
 	$categories = get_the_terms( get_the_ID(), 'category' );
 	$default_parent_id = get_option( 'category_by_priority' );
 
-	if( count( $categories ) == 0 )
+	if( !$categories || count( $categories ) == 0 )
 		return false;
 
 	if( is_null( $parent_id ) && $default_parent_id ) {
