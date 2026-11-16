@@ -14,8 +14,13 @@ Author: Siméon ||/\() Web Créateur
 Author URI: http://simeon.web-createur.com/
 */
 
-@import 'variables';
-@import 'colors';
+@use 'variables' as *;
+@use 'colors' as *;
+@use 'content_list' as *;
+@use 'global' as *;
+@use 'columns' as *;
+@use 'forms' as *;
+@include render-colors;
 
 /* Global */
 
@@ -31,7 +36,7 @@ Author URI: http://simeon.web-createur.com/
 }
 
 .content-wrap {
-	@import 'content_list';
+	@include render-content-list;
 
 	&[class*="content-list"] {
 
@@ -54,9 +59,9 @@ Author URI: http://simeon.web-createur.com/
 	}
 }
 
-@import 'global';
-@import 'columns';
-@import 'forms';
+@include render-global;
+@include render-columns;
+@include render-forms;
 
 .inside-entry-content {
 

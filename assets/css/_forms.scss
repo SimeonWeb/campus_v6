@@ -14,8 +14,10 @@ Author: Siméon ||/\() Web Créateur
 Author URI: http://simeon.web-createur.com/
 */
 
-@import 'variables';
+@use 'variables' as *;
 
+
+@mixin render-forms {
 /* Search */
 
 #search-playlist-form {
@@ -303,4 +305,5 @@ div.wpcf7 .wpcf7-form-control-wrap.season label input:checked + span:before {
 .wpcf7-form-control-wrap.lien_1 input,
 .wpcf7-form-control-wrap.lien_2 input {
 	margin-bottom: 10px;
+}
 }

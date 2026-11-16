@@ -14,6 +14,9 @@ Author: Siméon ||/\() Web Créateur
 Author URI: http://simeon.web-createur.com/
 */
 
+@use 'variables' as *;
+
+@mixin render-accordion {
 .acc {
     .acc-content:last-child {
         margin-bottom: $wrap-padding-alt;
@@ -97,4 +100,5 @@ body[class*="page-template-page-alt"] {
     .acc-content:after {
         background-color: $color-light-transparent;
     }
+}
 }
