@@ -328,20 +328,6 @@ function campus_scripts() {
 	wp_enqueue_style( 'campus-program-grid' );
 	wp_enqueue_script( 'campus-program-grid' );
 
-	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
-	if ( is_customize_preview() ) {
-		wp_enqueue_style( 'campus-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'campus-style' ), THEME_VERSION );
-		wp_style_add_data( 'campus-ie9', 'conditional', 'IE 9' );
-	}
-
-	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'campus-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'campus-style' ), THEME_VERSION );
-	wp_style_add_data( 'campus-ie8', 'conditional', 'lt IE 9' );
-
-	// Load the html5 shiv.
-	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
-	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
-
 	wp_enqueue_script( 'campus-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '1.0', true );
 
 	$campus_l10n = array(

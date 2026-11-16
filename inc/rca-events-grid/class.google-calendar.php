@@ -117,7 +117,7 @@ class RCA_Google_Calendar {
 		);
 
 		// Set cache key
-		$cache_key = get_class() . '_' . $calendar_id . '_' . $year . '_' . $week_number;
+		$cache_key = get_class($this) . '_' . $calendar_id . '_' . $year . '_' . $week_number;
 
 		// Get cached events
 		$this->events = get_transient( $cache_key );

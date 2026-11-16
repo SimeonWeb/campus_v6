@@ -14,34 +14,38 @@ Author: Siméon ||/\() Web Créateur
 Author URI: http://simeon.web-createur.com/
 */
 
+@use 'sass:color';
+@use 'variables' as *;
+
 /* mixin */
 
 @mixin grid-gradient( $selector, $color ) {
 
 	&.gradient-top-left {
 		#{$selector} {
-			background: linear-gradient(to top left, rgba($color, .9), rgba(mix($color, $color-global, 80%), .9));
+			background: linear-gradient(to top left, rgba($color, .9), rgba(color.mix($color, $color-global, 80%), .9));
 		}
 	}
 
 	&.gradient-top-right {
 		#{$selector} {
-			background: linear-gradient(to top right, rgba($color, .9), rgba(mix($color, $color-global, 80%), .9));
+			background: linear-gradient(to top right, rgba($color, .9), rgba(color.mix($color, $color-global, 80%), .9));
 		}
 	}
 
 	&.gradient-bottom-left {
 		#{$selector} {
-			background: linear-gradient(to bottom left, rgba($color, .9), rgba(mix($color, $color-global, 80%), .9));
+			background: linear-gradient(to bottom left, rgba($color, .9), rgba(color.mix($color, $color-global, 80%), .9));
 		}
 	}
 
 	&.gradient-bottom-right {
 		#{$selector} {
-			background: linear-gradient(to bottom right, rgba($color, .9), rgba(mix($color, $color-global, 80%), .9));
+			background: linear-gradient(to bottom right, rgba($color, .9), rgba(color.mix($color, $color-global, 80%), .9));
 		}
 	}
 }
+@mixin render-colors {
 
 /* Global */
 
@@ -114,7 +118,7 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	&.wp-category-image,
 	.taxonomy-thumbnail,
 	.post-thumbnail {
-		background-color: mix($color-two, $color-global, 40%);
+		background-color: color.mix($color-two, $color-global, 40%);
 	}
 
 	.taxonomy-title,
@@ -131,7 +135,7 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	&.wp-category-image,
 	.taxonomy-thumbnail,
 	.post-thumbnail {
-		background-color: mix($color-one, $color-global, 40%);
+		background-color: color.mix($color-one, $color-global, 40%);
 	}
 
 	.taxonomy-title,
@@ -148,7 +152,7 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	&.wp-category-image,
 	.taxonomy-thumbnail,
 	.post-thumbnail {
-		background-color: mix($color-three, $color-global, 40%);
+		background-color: color.mix($color-three, $color-global, 40%);
 	}
 
 	.taxonomy-title,
@@ -164,7 +168,7 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	&.wp-category-image,
 	.taxonomy-thumbnail,
 	.post-thumbnail {
-		background-color: mix($color-four, $color-global, 40%);
+		background-color: color.mix($color-four, $color-global, 40%);
 	}
 
 	.taxonomy-title,
@@ -180,7 +184,7 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	&.wp-category-image,
 	.taxonomy-thumbnail,
 	.post-thumbnail {
-		background-color: mix($color-murmures-1, $color-global, 40%);
+		background-color: color.mix($color-murmures-1, $color-global, 40%);
 	}
 
 	.taxonomy-title,
@@ -199,28 +203,28 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	&,
 	&.category-emission {
 		background: $color-two;
-		background:  linear-gradient(to top left, $color-two, mix($color-two, $color-global, 80%)) ;
+		background:  linear-gradient(to top left, $color-two, color.mix($color-two, $color-global, 80%)) ;
 	}
 
 	&.category-musique {
 		background: $color-one;
-		background:  linear-gradient(to top left, $color-one, mix($color-one, $color-global, 80%)) ;
+		background:  linear-gradient(to top left, $color-one, color.mix($color-one, $color-global, 80%)) ;
 	}
 
 	&.category-la-redac,
 	&.category-actus {
 		background: $color-three;
-		background:  linear-gradient(to top left, $color-three, mix($color-three, $color-global, 80%)) ;
+		background:  linear-gradient(to top left, $color-three, color.mix($color-three, $color-global, 80%)) ;
 	}
 
 	&.category-autres {
 		background: $color-four;
-		background:  linear-gradient(to top left, $color-four, mix($color-four, $color-global, 80%)) ;
+		background:  linear-gradient(to top left, $color-four, color.mix($color-four, $color-global, 80%)) ;
 	}
 
 	&.category-murmures {
 		background: $color-murmures-1;
-		background:  linear-gradient(to top left, $color-murmures-1, mix($color-murmures-1, $color-global, 80%)) ;
+		background:  linear-gradient(to top left, $color-murmures-1, color.mix($color-murmures-1, $color-global, 80%)) ;
 	}
 }
 
@@ -297,37 +301,37 @@ body.mce-content-body[class*="page-template-page-alt"] {
 
 		&.category-emission {
 			.taxonomy-header .taxonomy-content {
-				background-color: rgba( mix( $color-two, $color-global, 40%), .7 );
-				background: linear-gradient( to top left, rgba( mix( $color-two, $color-global, 30%), .8 ), rgba( mix( $color-two, $color-global, 50%), .8 ) );
+				background-color: rgba( color.mix( $color-two, $color-global, 40%), .7 );
+				background: linear-gradient( to top left, rgba( color.mix( $color-two, $color-global, 30%), .8 ), rgba( color.mix( $color-two, $color-global, 50%), .8 ) );
 			}
 		}
 
 		&.category-musique {
 			.taxonomy-header .taxonomy-content {
-				background-color: rgba( mix( $color-one, $color-global, 40%), .7 );
-				background: linear-gradient( to top left, rgba( mix( $color-one, $color-global, 30%), .8 ), rgba( mix( $color-one, $color-global, 50%), .8 ) );
+				background-color: rgba( color.mix( $color-one, $color-global, 40%), .7 );
+				background: linear-gradient( to top left, rgba( color.mix( $color-one, $color-global, 30%), .8 ), rgba( color.mix( $color-one, $color-global, 50%), .8 ) );
 			}
 		}
 
 		&.category-la-redac,
 		&.category-actus {
 			.taxonomy-header .taxonomy-content {
-				background-color: rgba( mix( $color-three, $color-global, 40%), .7 );
-				background: linear-gradient( to top left, rgba( mix( $color-three, $color-global, 30%), .8 ), rgba( mix( $color-three, $color-global, 50%), .8 ) );
+				background-color: rgba( color.mix( $color-three, $color-global, 40%), .7 );
+				background: linear-gradient( to top left, rgba( color.mix( $color-three, $color-global, 30%), .8 ), rgba( color.mix( $color-three, $color-global, 50%), .8 ) );
 			}
 		}
 
 		&.category-autres {
 			.taxonomy-header .taxonomy-content {
-				background-color: rgba( mix( $color-four, $color-global, 40%), .7 );
-				background: linear-gradient( to top left, rgba( mix( $color-four, $color-global, 30%), .8 ), rgba( mix( $color-four, $color-global, 50%), .8 ) );
+				background-color: rgba( color.mix( $color-four, $color-global, 40%), .7 );
+				background: linear-gradient( to top left, rgba( color.mix( $color-four, $color-global, 30%), .8 ), rgba( color.mix( $color-four, $color-global, 50%), .8 ) );
 			}
 		}
 
 		&.category-murmures {
 			.taxonomy-header .taxonomy-content {
-				background-color: rgba( mix( $color-murmures-1, $color-global, 40%), .7 );
-				background: linear-gradient( to top left, rgba( mix( $color-murmures-1, $color-global, 30%), .8 ), rgba( mix( $color-murmures-1, $color-global, 50%), .8 ) );
+				background-color: rgba( color.mix( $color-murmures-1, $color-global, 40%), .7 );
+				background: linear-gradient( to top left, rgba( color.mix( $color-murmures-1, $color-global, 30%), .8 ), rgba( color.mix( $color-murmures-1, $color-global, 50%), .8 ) );
 			}
 		}
 	}
@@ -484,4 +488,5 @@ body.mce-content-body[class*="page-template-page-alt"] {
 	.mejs-container .mejs-controls {
 		background: $color-global;
 	}
+}
 }

@@ -56,7 +56,17 @@ Media Queries
 Print
 --------------------------------------------------------------*/
 
-@import 'assets/css/variables';
+@use 'sass:math';
+@use 'assets/css/variables' as *;
+@use 'assets/css/forms_inputs' as *;
+@use 'assets/css/forms' as *;
+@use 'assets/css/content_list' as *;
+@use 'assets/css/content' as *;
+@use 'assets/css/global' as *;
+@use 'assets/css/columns' as *;
+@use 'assets/css/accordion' as *;
+@use 'assets/css/animations' as *;
+@use 'assets/css/colors' as *;
 
 /*--------------------------------------------------------------
 Normalize
@@ -544,8 +554,8 @@ blockquote:after {
 Forms
 --------------------------------------------------------------*/
 
-@import 'assets/css/forms_inputs';
-@import 'assets/css/forms';
+@include render-forms-inputs;
+@include render-forms;
 
 /*--------------------------------------------------------------
 7.0 Formatting
@@ -2097,7 +2107,7 @@ body:not(.loaded) .content-area {
 
 	/* content-list & content-list-detail */
 
-	@import 'assets/css/content_list';
+	@include render-content-list;
 
 	/* content-grid */
 
@@ -3098,7 +3108,7 @@ body:not(.page-template-page-alt-programs) {
 			.hero-title {
 				width: 100%;
 				height: 0;
-				padding-top: 250 / 430 * 100%;
+				padding-top: math.div(250, 430) * 100%;
 				background: url(assets/images/live.png) no-repeat center center;
 				background-size: contain;
 
@@ -3330,7 +3340,7 @@ body.page {
 	.content-area {
 		.entry-content {
 
-			@import 'assets/css/content';
+			@include render-content;
 		}
 	}
 
@@ -3350,9 +3360,9 @@ body.page {
 	}
 }
 
-@import 'assets/css/global';
-@import 'assets/css/columns';
-@import 'assets/css/accordion';
+@include render-global;
+@include render-columns;
+@include render-accordion;
 
 /*--------------------------------------------------------------
 Pages
@@ -4434,13 +4444,13 @@ object {
 Animations
 --------------------------------------------------------------*/
 
-@import 'assets/css/animations';
+@include render-animations;
 
 /*--------------------------------------------------------------
 Colors
 --------------------------------------------------------------*/
 
-@import 'assets/css/colors';
+@include render-colors;
 
 /*--------------------------------------------------------------
 Media Queries

@@ -14,8 +14,10 @@ Author: Siméon ||/\() Web Créateur
 Author URI: http://simeon.web-createur.com/
 */
 
-@import 'variables';
+@use 'variables' as *;
 
+
+@mixin render-forms-inputs {
 /* Global */
 
 label {
@@ -199,4 +201,5 @@ input[type="reset"].size-large {
 
 :-ms-input-placeholder {
 	color: #777;
+}
 }

@@ -20,7 +20,13 @@ Description: Used to style the TinyMCE editor.
  * 1.0 - Body
  */
 
-@import 'variables';
+@use 'variables' as *;
+@use 'colors' as *;
+@use 'global' as *;
+@use 'forms_inputs' as *;
+@use 'content' as *;
+@use 'columns' as *;
+@use 'accordion' as *;
 
 body {
 	background-color: #fff;
@@ -529,12 +535,12 @@ object {
 	margin-bottom: 0;
 }
 
-@import 'colors';
-@import 'global';
+@include render-colors;
+@include render-global;
 
-@import 'forms_inputs';
+@include render-forms-inputs;
 
-@import 'content';
+@include render-content;
 
-@import 'columns';
-@import 'accordion';
+@include render-columns;
+@include render-accordion;
